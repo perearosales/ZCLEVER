@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso Legal - ZCLEVER.COM</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Configuración de Colores Personalizados -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'z-orange': '#EB6620',
+                        'z-white': '#F5F5F5',
+                        'z-black': '#000000',
+                        'z-beige': '#ffdcc8',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Tailwind Typography CDN (para formatear texto legal) -->
+    <script src="https://cdn.tailwindcss.com/3.4.1?plugins=typography"></script>
+
+</head>
+<!-- CAMBIO: Fondo del body es blanco -->
+<body class="flex min-h-screen flex-col bg-white text-z-black antialiased">
+
+    <!-- ===== 1. NAVEGACIÓN (HEADER) ===== -->
+    <nav class="sticky top-0 z-50 w-full bg-white/95 shadow-md backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="index.html" class="text-2xl font-bold text-z-black">
+                    ZCLEVER.COM
+                </a>
+                
+                <!-- Enlaces de Navegación (Desktop) -->
+                <div class="hidden items-center space-x-8 md:flex">
+                    <a href="index.html#metodo" class="text-gray-600 hover:text-z-orange">Nuestro Método</a>
+                    <a href="index.html#planes" class="text-gray-600 hover:text-z-orange">Planes</a>
+                    <a href="index.html#empresas" class="text-gray-600 hover:text-z-orange">Empresas</a>
+                    <a href="faq.html" class="text-gray-600 hover:text-z-orange">FAQ</a>
+                </div>
+                
+                <!-- Botones CTA (Desktop) -->
+                <div class="hidden items-center space-x-4 md:flex">
+                    <a href="login.html" class="rounded-lg px-5 py-2.5 font-medium text-gray-700 transition hover:bg-gray-100">
+                        Iniciar Sesión
+                    </a>
+                    <!-- Botón Naranja -->
+                    <a href="index.html#contacto" class="rounded-lg bg-z-orange px-5 py-2.5 font-medium text-white shadow-lg transition hover:bg-opacity-90">
+                        Clase Gratis
+                    </a>
+                </div>
+                
+                <!-- Botón de Menú (Móvil) -->
+                <button id="menu-btn" class="md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Menú (Móvil) -->
+            <div id="mobile-menu" class="mt-4 hidden md:hidden">
+                <a href="index.html#metodo" class="block py-2 text-gray-600 hover:text-z-orange">Nuestro Método</a>
+                <a href="index.html#planes" class="block py-2 text-gray-600 hover:text-z-orange">Planes</a>
+                <a href="index.html#empresas" class="block py-2 text-gray-600 hover:text-z-orange">Empresas</a>
+                <a href="faq.html" class="block py-2 text-gray-600 hover:text-z-orange">FAQ</a>
+                <hr class="my-2">
+                <a href="login.html" class="block py-2 font-medium text-gray-700 hover:bg-gray-100">
+                    Iniciar Sesión
+                </a>
+                <a href="index.html#contacto" class="mt-2 block w-full rounded-lg bg-z-orange px-5 py-2.5 text-center font-medium text-white shadow-lg">
+                    Clase Gratis
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== 2. SECCIÓN DE TEXTO LEGAL ===== -->
+    <main class="flex-grow py-20 bg-white">
+        <div class="container mx-auto max-w-3xl rounded-lg bg-white p-10 md:shadow-lg">
+            <article class="prose prose-lg max-w-none">
+                
+                <h1>Aviso Legal</h1>
+                <p class="lead">Última actualización: 02 de noviembre de 2025</p>
+    
+                <h2>1. Identificación del Titular</h2>
+                <p>De conformidad con la legislación mexicana, se informa que este sitio web (en adelante, el "Sitio") es propiedad de:</p>
+                <ul>
+                    <li><strong>Responsable:</strong> ZCLEVER (Nombre comercial)</li>
+                    <li><strong>RFC:</strong> NHZ251125GN0</li>
+                    <li><strong>Domicilio:</strong> [Indicar Domicilio Fiscal - Por ser demo, se omite]</li>
+                    <li><strong>Correo Electrónico de Contacto:</strong> <a href="mailto:alejandro.perea@zclever.com">alejandro.perea@zclever.com</a></li>
+                </ul>
+    
+                <h2>2. Objeto del Sitio Web</h2>
+                <p>El presente Sitio Web tiene como objeto la promoción, comercialización y prestación de servicios de enseñanza del idioma inglés en línea, dirigidos tanto a particulares como a empresas.</p>
+    
+                <h2>3. Condiciones de Uso</h2>
+                <p>El acceso y/o uso de este Sitio atribuye la condición de USUARIO, que acepta, desde dicho acceso y/o uso, las Condiciones Generales de Uso aquí reflejadas. El USUARIO se compromete a hacer un uso adecuado de los contenidos y servicios que ZCLEVER.COM ofrece.</p>
+                <p>Queda prohibido el uso del Sitio Web con fines ilícitos, lesivos de los derechos e intereses de terceros, o que de cualquier forma puedan dañar, inutilizar, sobrecargar, deteriorar o impedir la normal utilización del Sitio Web.</p>
+    
+                <h2>4. Propiedad Intelectual e Industrial</h2>
+                <p>ZCLEVER.COM, por sí o como cesionaria, es titular de todos los derechos de propiedad intelectual e industrial de su página web, así como de los elementos contenidos en la misma (a título enunciativo: nombre, logotipo, textos, marcas, estructura y diseño).</p>
+                <p>Queda expresamente prohibida la reproducción, distribución y comunicación pública, incluida su modalidad de puesta a disposición, de la totalidad o parte de los contenidos de esta página web, con fines comerciales, en cualquier soporte y por cualquier medio técnico, sin la autorización de ZCLEVER.COM.</p>
+    
+                <h2>5. Exclusión de Garantías y Responsabilidad</h2>
+                <p>ZCLEVER.COM no se hace responsable, en ningún caso, de los daños y perjuicios de cualquier naturaleza que pudieran ocasionar, a título enunciativo: errores u omisiones en los contenidos, falta de disponibilidad del portal o la transmisión de virus o programas maliciosos o lesivos en los contenidos, a pesar de haber adoptado todas las medidas tecnológicas necesarias para evitarlo.</p>
+                <p>Siendo esta una versión de demostración ("demo") del sitio, el USUARIO acepta que la información puede no ser exacta y los servicios pueden no estar operativos. El uso de este sitio demo es bajo el propio riesgo del USUARIO.</p>
+    
+                <h2>6. Modificaciones</h2>
+                <p>ZCLEVER.COM se reserva el derecho de efectuar sin previo aviso las modificaciones que considere oportunas en su portal, pudiendo cambiar, suprimir o añadir tanto los contenidos y servicios que se presten a través de la misma como la forma en la que éstos aparezcan presentados o localizados en su portal.</p>
+    
+                <h2>7. Legislación Aplicable y Jurisdicción</h2>
+                <p>La relación entre ZCLEVER.COM y el USUARIO se regirá por la normativa mexicana vigente. Para cualquier controversia que pudiera derivarse del acceso o uso del Sitio Web, ambas partes se someten expresamente a los juzgados y tribunales de la ciudad de [Ciudad Principal, ej. Tijuana, Baja California], renunciando a cualquier otro fuero que pudiera corresponderles.</p>
+
+            </article>
+        </div>
+    </main>
+
+    <!-- ===== 9. PIE DE PÁGINA (FOOTER) ===== -->
+    <!-- Este pie de página es negro (bg-z-black) y es consistente -->
+    <footer id="footer" class="bg-z-black py-16 text-gray-300">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 gap-12 md:grid-cols-4">
+                <!-- Col 1: Logo y Descripción -->
+                <div>
+                    <h3 class="text-2xl font-bold text-white">ZCLEVER.COM</h3>
+                    <p class="mt-4 text-gray-400">Mejora tu fluidez en tiempo récord con clases de conversación grupales.</p>
+                </div>
+                
+                <!-- Col 2: Navegación -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white">Navegación</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="index.html#metodo" class="hover:text-white">Metodología</a></li>
+                        <li><a href="index.html#planes" class="hover:text-white">Precios</a></li>
+                        <li><a href="index.html#empresas" class="hover:text-white">Empresas</a></li>
+                        <li><a href="faq.html" class="hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Col 3: Legal (Actualizado) -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white">Legal</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="aviso-legal.html" class="font-semibold text-white">Aviso Legal</a></li>
+                        <li><a href="politica-privacidad.html" class="hover:text-white">Política de Privacidad</a></li>
+                        <li><a href="terminos-condiciones.html" class="hover:text-white">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Col 4: Contacto (Actualizado con nuevo formato) -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white">Contacto</h4>
+                    <div class="mt-4 space-y-4">
+                        <!-- Contacto Alejandro -->
+                        <div>
+                            <p class="font-medium text-white">Alejandro Perea</p>
+                            <a href="mailto:alejandro.perea@zclever.com" class="text-gray-300 hover:text-white">alejandro.perea@zclever.com</a><br>
+                            <a href="https://api.whatsapp.com/send?phone=526645025953" class="text-gray-300 hover:text-white">+52 664 502 5953</a>
+                        </div>
+                        <!-- Contacto Renato -->
+                        <div>
+                            <p class="font-medium text-white">Renato Gonzalez</p>
+                            <a href="mailto:renato.gonzalez@zclever.com" class="text-gray-300 hover:text-white">renato.gonzalez@zclever.com</a><br>
+                            <a href="https://api.whatsapp.com/send?phone=528711787692" class="text-gray-300 hover:text-white">+52 871 178 7692</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-8 border-gray-700">
+            <p class="text-center text-gray-500">© 2025 ZCLEVER.COM. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- ===== JavaScript para Menú Móvil ===== -->
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
+

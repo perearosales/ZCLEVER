@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos y Condiciones - ZCLEVER.COM</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Configuración de Colores Personalizados -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'z-orange': '#EB6620',
+                        'z-white': '#F5F5F5',
+                        'z-black': '#000000',
+                        'z-beige': '#ffdcc8', 
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Tailwind Typography CDN -->
+    <script src="https://cdn.tailwindcss.com/3.4.1?plugins=typography"></script>
+</head>
+<body class="flex min-h-screen flex-col bg-z-beige text-z-black antialiased">
+
+    <!-- ===== NAVEGACIÓN (HEADER) ===== -->
+    <nav class="sticky top-0 z-50 w-full bg-white/95 shadow-md backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="index.html" class="text-2xl font-bold text-z-black">
+                    ZCLEVER.COM
+                </a>
+                
+                <!-- Enlaces de Navegación (Desktop) -->
+                <div class="hidden items-center space-x-8 md:flex">
+                    <a href="index.html#metodo" class="text-gray-600 hover:text-z-orange">Nuestro Método</a>
+                    <a href="index.html#planes" class="text-gray-600 hover:text-z-orange">Planes</a>
+                    <a href="index.html#empresas" class="text-gray-600 hover:text-z-orange">Empresas</a>
+                    <a href="faq.html" class="text-gray-600 hover:text-z-orange">FAQ</a>
+                </div>
+                
+                <!-- Botones CTA (Desktop) -->
+                <div class="hidden items-center space-x-4 md:flex">
+                    <a href="login.html" class="rounded-lg px-5 py-2.5 font-medium text-gray-700 transition hover:bg-gray-100">
+                        Iniciar Sesión
+                    </a>
+                    <a href="index.html#contacto" class="rounded-lg bg-z-orange px-5 py-2.5 font-medium text-white shadow-lg transition hover:bg-opacity-90">
+                        Clase Gratis
+                    </a>
+                </div>
+                
+                <!-- Botón de Menú (Móvil) -->
+                <button id="menu-btn" class="md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Menú (Móvil) -->
+            <div id="mobile-menu" class="mt-4 hidden md:hidden">
+                <a href="index.html#metodo" class="block py-2 text-gray-600 hover:text-z-orange">Nuestro Método</a>
+                <a href="index.html#planes" class="block py-2 text-gray-600 hover:text-z-orange">Planes</a>
+                <a href="index.html#empresas" class="block py-2 text-gray-600 hover:text-z-orange">Empresas</a>
+                <a href="faq.html" class="block py-2 text-gray-600 hover:text-z-orange">FAQ</a>
+                <hr class="my-2">
+                <a href="login.html" class="block py-2 font-medium text-gray-700 hover:bg-gray-100">
+                    Iniciar Sesión
+                </a>
+                <a href="index.html#contacto" class="mt-2 block w-full rounded-lg bg-z-orange px-5 py-2.5 text-center font-medium text-white shadow-lg">
+                    Clase Gratis
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== SECCIÓN DE TEXTO LEGAL ===== -->
+    <main class="flex-grow py-20">
+        <div class="container mx-auto max-w-3xl rounded-lg bg-white p-10 shadow-lg">
+            <article class="prose prose-lg max-w-none">
+                <h1>Términos y Condiciones</h1>
+                <p class="lead">Bienvenido a ZCLEVER.COM. Al acceder y utilizar nuestro sitio web y servicios, usted acepta cumplir y estar sujeto a los siguientes términos y condiciones de uso.</p>
+                
+                <h2>1. Definición del Servicio</h2>
+                <p>ZCLEVER.COM ofrece servicios de educación en línea para el aprendizaje del idioma inglés, consistentes en clases grupales por videoconferencia, acceso a material digital y seguimiento académico.</p>
+                
+                <h2>2. Cuentas de Usuario</h2>
+                <p>Para acceder a los servicios de pago, es posible que deba crear una cuenta de usuario. Usted es responsable de mantener la confidencialidad de su contraseña y de todas las actividades que ocurran bajo su cuenta. Se compromete a notificar a ZCLEVER.COM inmediatamente sobre cualquier uso no autorizado de su cuenta.</p>
+                
+                <h2>3. Pagos y Suscripciones</h2>
+                <ul>
+                    <!-- CAMBIO: Política de cancelación actualizada -->
+                    <li><strong>Plan Mensual:</strong> Se cobrará de forma recurrente al método de pago proporcionado. El usuario puede cancelar en cualquier momento. Para evitar el cobro del próximo mes, deberá notificar su cancelación <strong>al menos 1 semana antes de su fecha de corte</strong>.</li>
+                    <li><strong>Plan Anual:</strong> Implica un pago único que cubre 12 meses de servicio. Este plan no es reembolsable, salvo que la ley aplicable disponga lo contrario. Se pueden ofrecer facilidades de pago como Meses Sin Intereses (MSI) con tarjetas participantes, sujeto a las condiciones del banco emisor.</li>
+                    <li><strong>Clase de Prueba:</strong> Se ofrece una (1) clase de prueba gratuita por usuario, sin compromiso de compra.</li>
+                </ul>
+                
+                <h2>4. Política de Cancelación y Reembolso</h2>
+                <p>El usuario puede cancelar su suscripción mensual en cualquier momento, notificando con al menos 1 semana de antelación a su fecha de corte. Si la cancelación se realiza con menos tiempo, se procesará el cobro del siguiente mes y el servicio permanecerá activo hasta el final de ese ciclo.</p>
+                <p>El Plan Anual no es reembolsable después de la compra.</p>
+
+                <h2>5. Propiedad Intelectual</h2>
+                <p>Todo el material didáctico (libros digitales, ejercicios, videos, etc.) proporcionado por ZCLEVER.COM es de nuestra propiedad exclusiva o contamos con las licencias para su uso. Se prohíbe su distribución, copia o uso fuera del ámbito de las clases contratadas.</p>
+                
+                <h2>6. Conducta del Usuario</h2>
+                <p>El usuario se compromete a mantener una conducta respetuosa durante las clases y en cualquier interacción con profesores y otros alumnos. ZCLEVER.COM se reserva el derecho de suspender o terminar el servicio a cualquier usuario que viole esta norma o utilice el servicio para fines ilegales.</p>
+
+                <h2>7. Modificaciones a los Términos</h2>
+                <p>ZCLEVER.COM se reserva el derecho de modificar estos Términos y Condiciones en cualquier momento. Las modificaciones entrarán en vigor al momento de su publicación en el Sitio Web.</p>
+                
+                <p><em>Última actualización: [Fecha de Hoy]</em></p>
+            </article>
+        </div>
+    </main>
+
+    <!-- ===== PIE DE PÁGINA (FOOTER) ===== -->
+    <footer id="footer" class="bg-z-black py-16 text-gray-300">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 gap-12 md:grid-cols-4">
+                <!-- Col 1: Logo y Descripción -->
+                <div>
+                    <h3 class="text-2xl font-bold text-white">ZCLEVER.COM</h3>
+                    <p class="mt-4 text-gray-400">Mejora tu fluidez en tiempo récord con clases de conversación grupales.</p>
+                </div>
+                
+                <!-- Col 2: Navegación -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white">Navegación</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="index.html#metodo" class="hover:text-white">Metodología</a></li>
+                        <li><a href="index.html#planes" class="hover:text-white">Precios</a></li>
+                        <li><a href="index.html#empresas" class="hover:text-white">Empresas</a></li>
+                        <li><a href="faq.html" class="hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Col 3: Legal (Actualizado) -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white">Legal</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="aviso-legal.html" class="hover:text-white">Aviso Legal</a></li>
+                        <li><a href="politica-privacidad.html" class="hover:text-white">Política de Privacidad</a></li>
+                        <li><a href="terminos-condiciones.html" class="hover:text-white">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Col 4: Contacto (Actualizado) -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white">Contacto</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="mailto:alejandro.perea@zclever.com" class="hover:text-white">alejandro.perea@zclever.com</a></li>
+                        <li><a href="mailto:renato.gonzalez@zclever.com" class="hover:text-white">renato.gonzalez@zclever.com</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=526645025953" class="hover:text-white">Alejandro: +52 664 502 5953</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=528711787692" class="hover:text-white">Renato: +52 871 178 7692</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-8 border-gray-700">
+            <p class="text-center text-gray-500">© 2025 ZCLEVER.COM. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- ===== JavaScript para Menú Móvil ===== -->
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
+

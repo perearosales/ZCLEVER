@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - ZCLEVER.COM</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Configuración de Colores Personalizados -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'z-orange': '#EB6620',
+                        'z-white': '#F5F5F5',
+                        'z-black': '#000000',
+                        'z-beige': '#ffdcc8', 
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Tailwind Typography CDN -->
+    <script src="https://cdn.tailwindcss.com/3.4.1?plugins=typography"></script>
+</head>
+<body class="flex min-h-screen flex-col bg-z-beige text-z-black antialiased">
+
+    <!-- ===== NAVEGACIÓN (HEADER) ===== -->
+    <nav class="sticky top-0 z-50 w-full bg-white/95 shadow-md backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="index.html" class="text-2xl font-bold text-z-black">
+                    ZCLEVER.COM
+                </a>
+                
+                <!-- Enlaces de Navegación (Desktop) -->
+                <div class="hidden items-center space-x-8 md:flex">
+                    <a href="index.html#metodo" class="text-gray-600 hover:text-z-orange">Nuestro Método</a>
+                    <a href="index.html#planes" class="text-gray-600 hover:text-z-orange">Planes</a>
+                    <a href="index.html#empresas" class="text-gray-600 hover:text-z-orange">Empresas</a>
+                    <a href="faq.html" class="text-gray-600 hover:text-z-orange">FAQ</a>
+                </div>
+                
+                <!-- Botones CTA (Desktop) -->
+                <div class="hidden items-center space-x-4 md:flex">
+                    <a href="login.html" class="rounded-lg px-5 py-2.5 font-medium text-gray-700 transition hover:bg-gray-100">
+                        Iniciar Sesión
+                    </a>
+                    <a href="index.html#contacto" class="rounded-lg bg-z-orange px-5 py-2.5 font-medium text-white shadow-lg transition hover:bg-opacity-90">
+                        Clase Gratis
+                    </a>
+                </div>
+                
+                <!-- Botón de Menú (Móvil) -->
+                <button id="menu-btn" class="md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Menú (Móvil) -->
+            <div id="mobile-menu" class="mt-4 hidden md:hidden">
+                <a href="index.html#metodo" class="block py-2 text-gray-600 hover:text-z-orange">Nuestro Método</a>
+                <a href="index.html#planes" class="block py-2 text-gray-600 hover:text-z-orange">Planes</a>
+                <a href="index.html#empresas" class="block py-2 text-gray-600 hover:text-z-orange">Empresas</a>
+                <a href="faq.html" class="block py-2 text-gray-600 hover:text-z-orange">FAQ</a>
+                <hr class="my-2">
+                <a href="login.html" class="block py-2 font-medium text-gray-700 hover:bg-gray-100">
+                    Iniciar Sesión
+                </a>
+                <a href="index.html#contacto" class="mt-2 block w-full rounded-lg bg-z-orange px-5 py-2.5 text-center font-medium text-white shadow-lg">
+                    Clase Gratis
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== SECCIÓN DE TEXTO LEGAL ===== -->
+    <main class="flex-grow py-20">
+        <div class="container mx-auto max-w-3xl rounded-lg bg-white p-10 shadow-lg">
+            <article class="prose prose-lg max-w-none">
+                <h1>Política de Privacidad</h1>
+                <p class="lead">De conformidad con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP), ZCLEVER.COM informa sobre su política de privacidad.</p>
+                
+                <h2>1. Responsable de los Datos Personales</h2>
+                <p>ZCLEVER.COM, con domicilio en [Domicilio Fiscal, Ciudad, Estado, CP], es responsable del tratamiento de sus datos personales.</p>
+                
+                <h2>2. Datos Recabados</h2>
+                <p>Recabamos los siguientes datos personales a través de nuestro formulario de contacto:</p>
+                <ul>
+                    <li>Nombre Completo</li>
+                    <li>Correo Electrónico</li>
+                    <li>Teléfono (WhatsApp)</li>
+                </ul>
+                <p>No recabamos datos personales sensibles.</p>
+                
+                <h2>3. Finalidad del Tratamiento de Datos</h2>
+                <p>Sus datos personales serán utilizados para las siguientes finalidades primarias:</p>
+                <ul>
+                    <li>Agendar y dar seguimiento a su clase de prueba gratuita.</li>
+                    <li>Proveerle información sobre nuestros planes, servicios y promociones.</li>
+                    <li>Contactarlo para fines de seguimiento académico y administrativo.</li>
+                    <li>Facturación y cobranza.</li>
+                </ul>
+                
+                <h2>4. Derechos ARCO</h2>
+                <p>Usted tiene derecho a Acceder, Rectificar, Cancelar u Oponerse (ARCO) al tratamiento de sus datos personales. Para ejercer sus derechos ARCO, deberá enviar una solicitud por escrito a nuestro correo electrónico de contacto: <a href="mailto:alejandro.perea@zclever.com">alejandro.perea@zclever.com</a>, acompañada de una identificación oficial.</p>
+
+                <h2>5. Uso de Cookies</h2>
+                <p>Este Sitio Web utiliza cookies técnicas esenciales para su funcionamiento. No utilizamos cookies de rastreo o publicitarias de terceros.</p>
+
+                <h2>6. Cambios al Aviso de Privacidad</h2>
+                <p>ZCLEVER.COM se reserva el derecho de efectuar en cualquier momento modificaciones o actualizaciones al presente aviso de privacidad. Dichas modificaciones estarán disponibles al público a través de este Sitio Web.</p>
+                
+                <p><em>Última actualización: [Fecha de Hoy]</em></p>
+            </article>
+        </div>
+    </main>
+
+    <!-- ===== PIE DE PÁGINA (FOOTER) ===== -->
+    <footer id="footer" class="bg-z-black py-16 text-gray-300">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 gap-12 md:grid-cols-4">
+                <!-- Col 1: Logo y Descripción -->
+                <div>
+                    <h3 class="text-2xl font-bold text-white">ZCLEVER.COM</h3>
+                    <p class="mt-4 text-gray-400">Mejora tu fluidez en tiempo récord con clases de conversación grupales.</p>
+                </div>
+                
+                <!-- Col 2: Navegación -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white">Navegación</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="index.html#metodo" class="hover:text-white">Metodología</a></li>
+                        <li><a href="index.html#planes" class="hover:text-white">Precios</a></li>
+                        <li><a href="index.html#empresas" class="hover:text-white">Empresas</a></li>
+                        <li><a href="faq.html" class="hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Col 3: Legal (Actualizado) -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white">Legal</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="aviso-legal.html" class="hover:text-white">Aviso Legal</a></li>
+                        <li><a href="politica-privacidad.html" class="hover:text-white">Política de Privacidad</a></li>
+                        <li><a href="terminos-condiciones.html" class="hover:text-white">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Col 4: Contacto (Actualizado) -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white">Contacto</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="mailto:alejandro.perea@zclever.com" class="hover:text-white">alejandro.perea@zclever.com</a></li>
+                        <li><a href="mailto:renato.gonzalez@zclever.com" class="hover:text-white">renato.gonzalez@zclever.com</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=526645025953" class="hover:text-white">Alejandro: +52 664 502 5953</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=528711787692" class="hover:text-white">Renato: +52 871 178 7692</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-8 border-gray-700">
+            <p class="text-center text-gray-500">© 2025 ZCLEVER.COM. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- ===== JavaScript para Menú Móvil ===== -->
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
+
