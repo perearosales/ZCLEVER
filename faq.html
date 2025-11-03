@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - ZCLEVER.COM</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Configuración de Colores Personalizados -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'z-orange': '#EB6620',
+                        'z-white': '#F5F5F5',
+                        'z-black': '#000000',
+                        'z-beige': '#ffdcc8',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-z-black antialiased">
+
+    <!-- ===== 1. NAVEGACIÓN (HEADER) ===== -->
+    <nav class="sticky top-0 z-50 w-full bg-white/95 shadow-md backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="index.html" class="text-2xl font-bold text-z-black">
+                    ZCLEVER.COM
+                </a>
+                
+                <!-- Enlaces de Navegación (Desktop) -->
+                <div class="hidden items-center space-x-8 md:flex">
+                    <a href="index.html#metodo" class="text-gray-600 hover:text-z-orange">Nuestro Método</a>
+                    <a href="index.html#planes" class="text-gray-600 hover:text-z-orange">Planes</a>
+                    <a href="index.html#empresas" class="text-gray-600 hover:text-z-orange">Empresas</a>
+                    <a href="faq.html" class="font-semibold text-z-orange">FAQ</a>
+                </div>
+                
+                <!-- Botones CTA (Desktop) -->
+                <div class="hidden items-center space-x-4 md:flex">
+                    <a href="login.html" class="rounded-lg px-5 py-2.5 font-medium text-gray-700 transition hover:bg-gray-100">
+                        Iniciar Sesión
+                    </a>
+                    <a href="index.html#contacto" class="rounded-lg bg-z-orange px-5 py-2.5 font-medium text-white shadow-lg transition hover:bg-opacity-90">
+                        Clase Gratis
+                    </a>
+                </div>
+                
+                <!-- Botón de Menú (Móvil) -->
+                <button id="menu-btn" class="md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Menú (Móvil) -->
+            <div id="mobile-menu" class="mt-4 hidden md:hidden">
+                <a href="index.html#metodo" class="block py-2 text-gray-600 hover:text-z-orange">Nuestro Método</a>
+                <a href="index.html#planes" class="block py-2 text-gray-600 hover:text-z-orange">Planes</a>
+                <a href="index.html#empresas" class="block py-2 text-gray-600 hover:text-z-orange">Empresas</a>
+                <a href="faq.html" class="block py-2 font-semibold text-z-orange">FAQ</a>
+                <hr class="my-2">
+                <a href="login.html" class="block py-2 font-medium text-gray-700 hover:bg-gray-100">
+                    Iniciar Sesión
+                </a>
+                <a href="index.html#contacto" class="mt-2 block w-full rounded-lg bg-z-orange px-5 py-2.5 text-center font-medium text-white shadow-lg">
+                    Clase Gratis
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== 2. SECCIÓN DE PREGUNTAS FRECUENTES ===== -->
+    <section class="bg-z-white py-20">
+        <div class="container mx-auto max-w-3xl px-6">
+            <h1 class="mb-12 text-center text-4xl font-bold md:text-5xl">Preguntas Frecuentes (FAQ)</h1>
+            
+            <div class="space-y-8">
+                <!-- Pregunta 1 -->
+                <div>
+                    <h2 class="mb-4 text-2xl font-semibold text-z-orange">¿Cómo me inscribo a la clase de prueba gratis?</h2>
+                    <p class="text-gray-700">¡Es muy fácil! Simplemente ve a la <a href="index.html#contacto" class="font-semibold text-z-orange underline">sección de contacto</a> en nuestra página principal, llena el formulario con tu nombre, correo y teléfono, y presiona "Enviar". También puedes contactarnos directamente por WhatsApp. Uno de nuestros asesores te responderá para agendar tu clase.</p>
+                </div>
+                
+                <!-- Pregunta 2 -->
+                <div>
+                    <h2 class="mb-4 text-2xl font-semibold text-z-orange">¿Qué niveles de inglés enseñan?</h2>
+                    <p class="text-gray-700">Cubrimos todos los niveles, desde A1 (principiante absoluto) hasta C2 (maestría). Tu clase de prueba incluye una evaluación de nivel para ubicarte en el grupo correcto y personalizar tu plan de estudio.</p>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div>
+                    <h2 class="mb-4 text-2xl font-semibold text-z-orange">¿Los grupos son muy grandes?</h2>
+                    <p class="text-gray-700">Para nada. Creemos en la enseñanza personalizada. Nuestros grupos son reducidos, con un máximo de 6 alumnos por clase. Esto garantiza que tengas suficiente tiempo para hablar, practicar y recibir retroalimentación directa del profesor.</p>
+                </div>
+
+                <!-- Pregunta 4 -->
+                <div>
+                    <h2 class="mb-4 text-2xl font-semibold text-z-orange">¿Qué pasa si falto a una clase?</h2>
+                    <p class="text-gray-700">Entendemos que surgen imprevistos. Aunque las clases grupales no se pueden reponer individualmente, todas las clases quedan grabadas y tendrás acceso a la grabación y al material visto en nuestra plataforma. Así, nunca te perderás el contenido.</p>
+                </div>
+                
+                <!-- Pregunta 5 -->
+                <div>
+                    <h2 class="mb-4 text-2xl font-semibold text-z-orange">¿Tengo que comprar libros o materiales?</h2>
+                    <p class="text-gray-700">¡No! En ZCLEVER todos los materiales están incluidos en tu mensualidad. No hay costos ocultos. Tendrás acceso a nuestra plataforma digital con todos los ejercicios, lecturas y recursos necesarios para tus clases. Esto representa un gran ahorro comparado con otras escuelas.</p>
+                </div>
+
+                <!-- Pregunta 6 -->
+                <div>
+                    <h2 class="mb-4 text-2xl font-semibold text-z-orange">¿Cómo funcionan los pagos?</h2>
+                    <p class="text-gray-700">Ofrecemos dos planes principales. El **Plan Mensual** se paga mes a mes y puedes cancelarlo cuando quieras (notificando 1 semana antes de tu fecha de corte). El **Plan Anual** ofrece el mejor descuento (40% OFF) y se paga en una sola exhibición, con opción a 12 Meses Sin Intereses con tarjetas participantes.</p>
+                </div>
+
+                <!-- Pregunta 7 -->
+                <div>
+                    <h2 class="mb-4 text-2xl font-semibold text-z-orange">¿Qué necesito para tomar las clases?</h2>
+                    <p class="text-gray-700">Solo necesitas tres cosas: un dispositivo (PC, laptop, tablet o móvil), una conexión a internet estable y ¡muchas ganas de aprender! Recomendamos usar audífonos con micrófono para una mejor calidad de audio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ===== 3. SECCIÓN "AÚN TIENES DUDAS" (CTA) ===== -->
+    <section class="bg-z-beige py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="mb-6 text-3xl font-bold md:text-4xl">
+                ¿Aún tienes dudas?
+            </h2>
+            <p class="mx-auto max-w-3xl text-lg text-gray-700">
+                Nuestro equipo está listo para ayudarte. Contáctanos directamente por WhatsApp o correo y resolveremos todas tus preguntas.
+            </p>
+            <a href="index.html#contacto" class="mt-10 inline-block rounded-lg bg-z-orange px-10 py-3 text-lg font-bold text-white shadow-lg transition hover:bg-opacity-90">
+                Contactar Ahora
+            </a>
+        </div>
+    </section>
+
+    <!-- ===== 9. PIE DE PÁGINA (FOOTER) ===== -->
+    <footer id="footer" class="bg-z-black py-16 text-gray-300">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 gap-12 md:grid-cols-4">
+                <!-- Col 1: Logo y Descripción -->
+                <div>
+                    <h3 class="text-2xl font-bold text-white">ZCLEVER.COM</h3>
+                    <p class="mt-4 text-gray-400">Mejora tu fluidez en tiempo récord con clases de conversación grupales.</p>
+                </div>
+                
+                <!-- Col 2: Navegación -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white">Navegación</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="index.html#metodo" class="hover:text-white">Metodología</a></li>
+                        <li><a href="index.html#planes" class="hover:text-white">Precios</a></li>
+                        <li><a href="index.html#empresas" class="hover:text-white">Empresas</a></li>
+                        <li><a href="faq.html" class="hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Col 3: Legal (Actualizado) -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white">Legal</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="aviso-legal.html" class="hover:text-white">Aviso Legal</a></li>
+                        <li><a href="politica-privacidad.html" class="hover:text-white">Política de Privacidad</a></li>
+                        <li><a href="terminos-condiciones.html" class="hover:text-white">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Col 4: Contacto (Actualizado con nuevo formato) -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white">Contacto</h4>
+                    <div class="mt-4 space-y-4">
+                        <!-- Contacto Alejandro -->
+                        <div>
+                            <p class="font-medium text-white">Alejandro Perea</p>
+                            <a href="mailto:alejandro.perea@zclever.com" class="text-gray-300 hover:text-white">alejandro.perea@zclever.com</a><br>
+                            <a href="https://api.whatsapp.com/send?phone=526645025953" class="text-gray-300 hover:text-white">+52 664 502 5953</a>
+                        </div>
+                        <!-- Contacto Renato -->
+                        <div>
+                            <p class="font-medium text-white">Renato Gonzalez</p>
+                            <a href="mailto:renato.gonzalez@zclever.com" class="text-gray-300 hover:text-white">renato.gonzalez@zclever.com</a><br>
+                            <a href="https://api.whatsapp.com/send?phone=528711787692" class="text-gray-300 hover:text-white">+52 871 178 7692</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-8 border-gray-700">
+            <p class="text-center text-gray-500">© 2025 ZCLEVER.COM. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- ===== JavaScript para Menú Móvil ===== -->
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </SCript>
+</body>
+</html>
+

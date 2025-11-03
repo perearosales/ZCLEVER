@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - ZCLEVER.COM</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Configuración de Colores Personalizados -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'z-orange': '#EB6620',
+                        'z-white': '#F5F5F5',
+                        'z-black': '#000000',
+                        'z-beige': '#ffdcc8',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-z-white text-z-black antialiased">
+
+    <!-- ===== 1. NAVEGACIÓN (HEADER) ===== -->
+    <nav class="sticky top-0 z-50 w-full bg-white/95 shadow-md backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="index.html" class="text-2xl font-bold text-z-black">
+                    ZCLEVER.COM
+                </a>
+                
+                <!-- Enlaces de Navegación (Desktop) -->
+                <div class="hidden items-center space-x-8 md:flex">
+                    <a href="index.html#metodo" class="text-gray-600 hover:text-z-orange">Nuestro Método</a>
+                    <a href="index.html#planes" class="text-gray-600 hover:text-z-orange">Planes</a>
+                    <a href="index.html#empresas" class="text-gray-600 hover:text-z-orange">Empresas</a>
+                    <a href="faq.html" class="text-gray-600 hover:text-z-orange">FAQ</a>
+                </div>
+                
+                <!-- Botones CTA (Desktop) -->
+                <div class="hidden items-center space-x-4 md:flex">
+                    <a href="login.html" class="rounded-lg bg-gray-100 px-5 py-2.5 font-medium text-z-orange">
+                        Iniciar Sesión
+                    </a>
+                    <a href="index.html#contacto" class="rounded-lg bg-z-orange px-5 py-2.5 font-medium text-white shadow-lg transition hover:bg-opacity-90">
+                        Clase Gratis
+                    </a>
+                </div>
+                
+                <!-- Botón de Menú (Móvil) -->
+                <button id="menu-btn" class="md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Menú (Móvil) -->
+            <div id="mobile-menu" class="mt-4 hidden md:hidden">
+                <a href="index.html#metodo" class="block py-2 text-gray-600 hover:text-z-orange">Nuestro Método</a>
+                <a href="index.html#planes" class="block py-2 text-gray-600 hover:text-z-orange">Planes</a>
+                <a href="index.html#empresas" class="block py-2 text-gray-600 hover:text-z-orange">Empresas</a>
+                <a href="faq.html" class="block py-2 text-gray-600 hover:text-z-orange">FAQ</a>
+                <hr class="my-2">
+                <a href="login.html" class="block py-2 font-medium text-z-orange hover:bg-gray-100">
+                    Iniciar Sesión
+                </a>
+                <a href="index.html#contacto" class="mt-2 block w-full rounded-lg bg-z-orange px-5 py-2.5 text-center font-medium text-white shadow-lg">
+                    Clase Gratis
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== 2. SECCIÓN DE LOGIN ===== -->
+    <section class="flex min-h-[70vh] items-center justify-center bg-z-white py-20">
+        <div class="container mx-auto max-w-md px-6">
+            <div class="rounded-lg bg-white p-8 shadow-2xl">
+                <h1 class="mb-6 text-center text-3xl font-bold">Iniciar Sesión</h1>
+                
+                <!-- Mensaje de Error (oculto por defecto) -->
+                <div id="error-message" class="mb-4 hidden rounded-lg bg-red-100 p-4 text-center text-red-700">
+                    Usuario o contraseña no válidos.
+                </div>
+                
+                <form id="login-form" class="space-y-6">
+                    <div>
+                        <label for="usuario" class="mb-2 block font-medium text-gray-700">Usuario (Correo)</label>
+                        <input type="email" id="usuario" name="usuario" class="w-full rounded-lg border border-gray-300 p-3" placeholder="tu@correo.com" required>
+                    </div>
+                    <div>
+                        <label for="password" class="mb-2 block font-medium text-gray-700">Contraseña</label>
+                        <input type="password" id="password" name="password" class="w-full rounded-lg border border-gray-300 p-3" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="w-full rounded-lg bg-z-orange px-8 py-3 text-lg font-bold text-white shadow-lg transition hover:bg-opacity-90">
+                        Entrar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ===== 9. PIE DE PÁGINA (FOOTER) ===== -->
+    <footer id="footer" class="bg-z-black py-16 text-gray-300">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 gap-12 md:grid-cols-4">
+                <!-- Col 1: Logo y Descripción -->
+                <div>
+                    <h3 class="text-2xl font-bold text-white">ZCLEVER.COM</h3>
+                    <p class="mt-4 text-gray-400">Mejora tu fluidez en tiempo récord con clases de conversación grupales.</p>
+                </div>
+                
+                <!-- Col 2: Navegación -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white">Navegación</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="index.html#metodo" class="hover:text-white">Metodología</a></li>
+                        <li><a href="index.html#planes" classD="hover:text-white">Precios</a></li>
+                        <li><a href="index.html#empresas" class="hover:text-white">Empresas</a></li>
+                        <li><a href="faq.html" class="hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Col 3: Legal (Actualizado) -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white">Legal</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="aviso-legal.html" class="hover:text-white">Aviso Legal</a></li>
+                        <li><a href="politica-privacidad.html" class="hover:text-white">Política de Privacidad</a></li>
+                        <li><a href="terminos-condiciones.html" class="hover:text-white">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Col 4: Contacto (Actualizado con nuevo formato) -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white">Contacto</h4>
+                    <div class="mt-4 space-y-4">
+                        <!-- Contacto Alejandro -->
+                        <div>
+                            <p class="font-medium text-white">Alejandro Perea</p>
+                            <a href="mailto:alejandro.perea@zclever.com" class="text-gray-300 hover:text-white">alejandro.perea@zclever.com</a><br>
+                            <a href="https://api.whatsapp.com/send?phone=526645025953" class="text-gray-300 hover:text-white">+52 664 502 5953</a>
+                        </div>
+                        <!-- Contacto Renato -->
+                        <div>
+                            <p class="font-medium text-white">Renato Gonzalez</p>
+                            <a href="mailto:renato.gonzalez@zclever.com" class="text-gray-300 hover:text-white">renato.gonzalez@zclever.com</a><br>
+                            <a href="https://api.whatsapp.com/send?phone=528711787692" class="text-gray-300 hover:text-white">+52 871 178 7692</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-8 border-gray-700">
+            <p class="text-center text-gray-500">© 2025 ZCLEVER.COM. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- ===== JavaScript para Menú Móvil ===== -->
+    <script>
+        // Script para menú móvil
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Script para login "falso"
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            // Prevenir que el formulario se envíe
+            event.preventDefault();
+            
+            // Mostrar el mensaje de error
+            document.getElementById('error-message').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
+
