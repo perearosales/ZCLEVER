@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Gracias! - ZCLEVER.COM</title>
+    <title>¡Gracias por Contactarnos! - ZCLEVER.COM</title>
     
-    <!-- Google Fonts - Inter -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- 1. Configuración de Colores Personalizados (DEBE IR PRIMERO) -->
     <script>
         tailwind.config = {
             theme: {
@@ -28,23 +28,16 @@
             }
         }
     </script>
-
-    <!-- 2. Tailwind CSS CDN (DEBE IR DESPUÉS DE LA CONFIG) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
 </head>
-<body class="flex min-h-screen flex-col bg-white text-z-black antialiased">
+<body class="bg-white text-z-black antialiased">
 
-    <!-- ===== 1. NAVEGACIÓN (HEADER) ===== -->
     <nav class="sticky top-0 z-50 w-full bg-white/95 shadow-md backdrop-blur-sm">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <!-- Logo -->
                 <a href="index.html" class="text-2xl font-bold text-z-black">
                     ZCLEVER.COM
                 </a>
                 
-                <!-- Enlaces de Navegación (Desktop) -->
                 <div class="hidden items-center space-x-8 md:flex">
                     <a href="index.html#metodo" class="text-gray-600 hover:text-z-orange">Nuestro Método</a>
                     <a href="index.html#planes" class="text-gray-600 hover:text-z-orange">Planes</a>
@@ -52,18 +45,15 @@
                     <a href="faq.html" class="text-gray-600 hover:text-z-orange">FAQ</a>
                 </div>
                 
-                <!-- Botones CTA (Desktop) -->
                 <div class="hidden items-center space-x-4 md:flex">
                     <a href="login.html" class="rounded-lg px-5 py-2.5 font-medium text-gray-700 transition hover:bg-gray-100">
                         Iniciar Sesión
                     </a>
-                    <!-- Botón Naranja -->
                     <a href="index.html#contacto" class="rounded-lg bg-z-orange px-5 py-2.5 font-medium text-white shadow-lg transition hover:bg-opacity-90">
                         Clase Gratis
                     </a>
                 </div>
                 
-                <!-- Botón de Menú (Móvil) -->
                 <button id="menu-btn" class="md:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -71,7 +61,6 @@
                 </button>
             </div>
             
-            <!-- Menú (Móvil) -->
             <div id="mobile-menu" class="mt-4 hidden md:hidden">
                 <a href="index.html#metodo" class="block py-2 text-gray-600 hover:text-z-orange">Nuestro Método</a>
                 <a href="index.html#planes" class="block py-2 text-gray-600 hover:text-z-orange">Planes</a>
@@ -88,29 +77,34 @@
         </div>
     </nav>
 
-    <!-- ===== 2. SECCIÓN DE AGRADECIMIENTO ===== -->
-    <main class="flex-grow bg-white py-20">
-        <div class="container mx-auto max-w-3xl rounded-lg bg-white p-10 text-center md:shadow-lg">
-            <h1 class="text-4xl font-bold text-z-orange">¡Gracias por contactarnos!</h1>
-            <p class="mt-4 text-lg text-gray-700">Hemos recibido tu información.</p>
-            <p class="mt-2 text-gray-700">Nos pondremos en contacto contigo a la brevedad en el correo o teléfono que nos proporcionaste.</p>
-            <a href="index.html" class="mt-8 inline-block rounded-lg bg-z-black px-6 py-3 font-medium text-white transition hover:bg-opacity-80">
-                Volver al Inicio
+    <section class="bg-z-beige py-32 text-center">
+        <div class="container mx-auto max-w-2xl px-6">
+            
+            <div class="mb-8 inline-flex h-20 w-20 items-center justify-center rounded-full bg-green-100 text-green-600">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-10 w-10">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+            </div>
+
+            <h1 class="mb-6 text-4xl font-bold md:text-5xl">¡Ya estás un paso más cerca!</h1>
+            <p class="mb-10 text-lg text-gray-700 md:text-xl">
+                ¡Excelente decisión! Hemos recibido tu solicitud. Un miembro de nuestro equipo ZCLEVER te contactará muy pronto por correo o WhatsApp para conversar sobre tus objetivos y los siguientes pasos.
+            </p>
+            
+            <a href="index.html" class="inline-block rounded-lg bg-z-orange px-10 py-4 text-lg font-bold text-white shadow-xl transition hover:bg-opacity-90">
+                Volver a la Página Principal
             </a>
         </div>
-    </main>
-
-    <!-- ===== 9. PIE DE PÁGINA (FOOTER) ===== -->
+    </section>
+    
     <footer id="footer" class="bg-z-black py-16 text-gray-300">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 gap-12 md:grid-cols-4">
-                <!-- Col 1: Logo y Descripción -->
                 <div>
                     <h3 class="text-2xl font-bold text-white">ZCLEVER.COM</h3>
                     <p class="mt-4 text-gray-400">Mejora tu fluidez en tiempo récord con clases de conversación grupales.</p>
                 </div>
                 
-                <!-- Col 2: Navegación -->
                 <div>
                     <h4 class="text-lg font-semibold text-white">Navegación</h4>
                     <ul class="mt-4 space-y-2">
@@ -121,7 +115,6 @@
                     </ul>
                 </div>
                 
-                <!-- Col 3: Legal -->
                 <div>
                     <h4 class="text-lg font-semibold text-white">Legal</h4>
                     <ul class="mt-4 space-y-2">
@@ -131,17 +124,14 @@
                     </ul>
                 </div>
                 
-                <!-- Col 4: Contacto -->
                 <div>
                     <h4 class="text-lg font-semibold text-white">Contacto</h4>
                     <div class="mt-4 space-y-4">
-                        <!-- Contacto Alejandro -->
                         <div>
                             <p class="font-medium text-white">Alejandro Perea</p>
                             <a href="mailto:alejandro.perea@zclever.com" class="text-gray-300 hover:text-white">alejandro.perea@zclever.com</a><br>
                             <a href="https://api.whatsapp.com/send?phone=526645025953" class="text-gray-300 hover:text-white">+52 664 502 5953</a>
                         </div>
-                        <!-- Contacto Renato -->
                         <div>
                             <p class="font-medium text-white">Renato Gonzalez</p>
                             <a href="mailto:renato.gonzalez@zclever.com" class="text-gray-300 hover:text-white">renato.gonzalez@zclever.com</a><br>
@@ -155,7 +145,6 @@
         </div>
     </footer>
 
-    <!-- ===== JavaScript para Menú Móvil ===== -->
     <script>
         document.getElementById('menu-btn').addEventListener('click', function() {
             document.getElementById('mobile-menu').classList.toggle('hidden');
@@ -163,3 +152,4 @@
     </script>
 </body>
 </html>
+
