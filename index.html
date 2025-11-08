@@ -1,480 +1,540 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZCLEVER.COM - Clases de Inglés Online</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZCLEVER.COM - Clases de Inglés Online</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     
-    <link rel="icon" type="image/png" href="ZFOX.png">
-            <script src="https://cdn.tailwindcss.com"></script>
-    
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-        <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'z-orange': '#EB6620',
-                        'z-white': '#F5F5F5',
-                        'z-black': '#000000',
-                        'z-beige': '#ffdcc8', // Nuevo color beige
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    // CAMBIO: Se añaden keyframes y animación para el carrusel de testimonios
-                    animation: {
-                        scroll: 'scroll 60s linear infinite',
-                    },
-              _B       keyframes: {
-                        scroll: {
-                            'from': { transform: 'translateX(0)' },
-                            // CAMBIO: Se ajusta a -40% para la animación de bucle correcta
-                            'to': { transform: 'translateX(-30%)' }
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .popular-card {
-            transform: scale(1.03);
-            border-width: 2px;
-            border-color: #EB6620;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-    </style>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Configuración de Colores Personalizados -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'z-orange': '#EB6620',
+                        'z-white': '#F5F5F5',
+                        'z-black': '#000000',
+                        'z-beige': '#ffdcc8', // Nuevo color beige
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    // CAMBIO: Se añaden keyframes y animación para el carrusel de testimonios
+                    animation: {
+                        scroll: 'scroll 60s linear infinite',
+                    },
+                    keyframes: {
+                        scroll: {
+                            'from': { transform: 'translateX(0)' },
+                            // CAMBIO: Se ajusta a -40% para la animación de bucle correcta
+                            'to': { transform: 'translateX(-30%)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .popular-card {
+            transform: scale(1.03);
+            border-width: 2px;
+            border-color: #EB6620;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
 </head>
 <body class="bg-white text-z-black antialiased">
 
-        <nav class="sticky top-0 z-50 w-full bg-white/95 shadow-md backdrop-blur-sm">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                                <a href="#" class="text-2xl font-bold text-z-black">
-                    ZCLEVER.COM
-                </a>
-                
-                                <div class="hidden items-center space-x-8 md:flex">
-                    <a href="#metodo" class="text-gray-600 hover:text-z-orange">Nuestro Método</a>
-                    <a href="#planes" class="text-gray-600 hover:text-z-orange">Planes</a>
-                    <a href="#empresas" class="text-gray-600 hover:text-z-orange">Empresas</a>
-                    <a href="faq.html" class="text-gray-600 hover:text-z-orange">FAQ</a>
-                </div>
-                
-                                <div class="hidden items-center space-x-4 md:flex">
-                    <a href="login.html" class="rounded-lg px-5 py-2.5 font-medium text-gray-700 transition hover:bg-gray-100">
-                        Iniciar Sesión
-                    </a>
-                    <a href="#contacto" class="rounded-lg bg-z-orange px-5 py-2.5 font-medium text-white shadow-lg transition hover:bg-opacity-90">
-                        Clase Gratis
-                    </a>
-                </div>
-                
-        _B                         <button id="menu-btn" class="md:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
-                </button>
-            </div>
-            
-                        <div id="mobile-menu" class="mt-4 hidden md:hidden">
-                <a href="#metodo" class="block py-2 text-gray-600 hover:text-z-orange">Nuestro Método</a>
-                <a href="#planes" class="block py-2 text-gray-600 hover:text-z-orange">Planes</a>
-        _B       <a href="#empresas" class="block py-2 text-gray-600 hover:text-z-orange">Empresas</a>
-                <a href="faq.html" class="block py-2 text-gray-600 hover:text-z-orange">FAQ</a>
-                <hr class="my-2">
-                <a href="login.html" class="block py-2 font-medium text-gray-700 hover:bg-gray-100">
-                    Iniciar Sesión
-                </a>
-                <a href="#contacto" class="mt-2 block w-full rounded-lg bg-z-orange px-5 py-2.5 text-center font-medium text-white shadow-lg">
-                    Clase Gratis
-                </a>
-            </div>
-        </div>
-    </nav>
+    <!-- ===== 1. NAVEGACIÓN (HEADER) ===== -->
+    <nav class="sticky top-0 z-50 w-full bg-white/95 shadow-md backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="#" class="text-2xl font-bold text-z-black">
+                    ZCLEVER.COM
+                </a>
+                
+                <!-- Enlaces de Navegación (Desktop) -->
+                <div class="hidden items-center space-x-8 md:flex">
+                    <a href="#metodo" class="text-gray-600 hover:text-z-orange">Nuestro Método</a>
+                    <a href="#planes" class="text-gray-600 hover:text-z-orange">Planes</a>
+                    <a href="#empresas" class="text-gray-600 hover:text-z-orange">Empresas</a>
+                    <a href="faq.html" class="text-gray-600 hover:text-z-orange">FAQ</a>
+                </div>
+                
+                <!-- Botones CTA (Desktop) -->
+                <div class="hidden items-center space-x-4 md:flex">
+                    <a href="login.html" class="rounded-lg px-5 py-2.5 font-medium text-gray-700 transition hover:bg-gray-100">
+                        Iniciar Sesión
+                    </a>
+                    <a href="#contacto" class="rounded-lg bg-z-orange px-5 py-2.5 font-medium text-white shadow-lg transition hover:bg-opacity-90">
+                        Clase Gratis
+                    </a>
+                </div>
+                
+                <!-- Botón de Menú (Móvil) -->
+                <button id="menu-btn" class="md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Menú (Móvil) -->
+            <div id="mobile-menu" class="mt-4 hidden md:hidden">
+                <a href="#metodo" class="block py-2 text-gray-600 hover:text-z-orange">Nuestro Método</a>
+                <a href="#planes" class="block py-2 text-gray-600 hover:text-z-orange">Planes</a>
+                <a href="#empresas" class="block py-2 text-gray-600 hover:text-z-orange">Empresas</a>
+                <a href="faq.html" class="block py-2 text-gray-600 hover:text-z-orange">FAQ</a>
+                <hr class="my-2">
+                <a href="login.html" class="block py-2 font-medium text-gray-700 hover:bg-gray-100">
+                    Iniciar Sesión
+                </a>
+                <a href="#contacto" class="mt-2 block w-full rounded-lg bg-z-orange px-5 py-2.5 text-center font-medium text-white shadow-lg">
+                    Clase Gratis
+                </a>
+            </div>
+        </div>
+    </nav>
 
-        <section id="hero" class="bg-z-beige py-24 pt-32 text-center">
-        <div class="container mx-auto px-6">
-            <h1 class="text-4xl font-extrabold leading-tight text-z-black md:text-6xl">
-                Clases de Inglés Online: <span class="block text-z-orange">Mejora tu Fluidez en Tiempo Récord.</span>
-            </h1>
-            <h2 class="mt-6 text-lg text-gray-700 md:text-2xl">
-                Conversación con <strong>Profesores Nativos de Estados Unidos</strong>, horario de tu preferencia y temario adaptado a ti.
-            </h2>
-            
-                        <a href="#contacto" class="mt-10 inline-block rounded-lg bg-z-orange px-10 py-4 text-xl font-bold text-white shadow-xl transition hover:bg-opacity-90">
-                Reserva tu Primera Clase GRATIS
-            </a>
-            
-                        <div class="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-gray-600">
-                <span class="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-2 h-5 w-5 text-z-orange"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
-                    Clases de 1 h
-                </span>
-                <span class="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-2 h-5 w-5 text-z-orange"><path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
-                    Sin Matrícula ni Permanencia
-                </span>
-                <span class="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-2 h-5 w-5 text-z-orange"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" /></svg>
-                    Valoración media +4.9 ⭐
-                </span>
-            </div>
-        </div>
-    </section>
+    <!-- ===== 2. SECCIÓN HERO ===== -->
+    <section id="hero" class="bg-z-beige py-24 pt-32 text-center">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl font-extrabold leading-tight text-z-black md:text-6xl">
+                Clases de Inglés Online: <span class="block text-z-orange">Mejora tu Fluidez en Tiempo Récord.</span>
+            </h1>
+            <h2 class="mt-6 text-lg text-gray-700 md:text-2xl">
+                Conversación con <strong>Profesores Nativos de Estados Unidos</strong>, horario de tu preferencia y temario adaptado a ti.
+            </h2>
+            
+            <!-- CTA Principal -->
+            <a href="#contacto" class="mt-10 inline-block rounded-lg bg-z-orange px-10 py-4 text-xl font-bold text-white shadow-xl transition hover:bg-opacity-90">
+                Reserva tu Primera Clase GRATIS
+            </a>
+            
+            <!-- Refuerzos de Confianza -->
+            <div class="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-gray-600">
+                <span class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-2 h-5 w-5 text-z-orange"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                    Clases de 1 h
+                </span>
+                <span class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-2 h-5 w-5 text-z-orange"><path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                    Sin Matrícula ni Permanencia
+                </span>
+                <span class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-2 h-5 w-5 text-z-orange"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" /></svg>
+                    Valoración media +4.9 ⭐
+                </span>
+            </div>
+        </div>
+    </section>
 
-        <section id="metodo" class="bg-z-white py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="mb-16 text-center text-3xl font-bold md:text-4xl">
-                Habla inglés desde el primer minuto con el método ZCLEVER
-            </h2>
-            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-                                <div class="rounded-lg bg-white p-8 text-center shadow-lg">
-                    <div class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 text-z-orange">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-8 w-8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 20.25c.966 0 1.898-.168 2.754-.462-.858-.46-1.63-.996-2.296-1.662a.562.562 0 0 0-.812 0c-.665.666-1.438 1.202-2.296 1.662A8.92 8.92 0 0 0 12 20.25Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 15a.562.562 0 0 0 .562-.562V12.938c0-.985.659-1.85 1.5-2.312a2.25 2.25 0 0 0-3.062 0c.841.462 1.5 1.327 1.5 2.312v1.5c0 .31-.252.562-.562.562Zm-2.625 0c-.31 0-.562-.252-.562-.562V12.938c0-.985.659-1.85 1.5-2.312a2.25 2.25 0 0 0-3.062 0c.841.462 1.5 1.327 1.5 2.312v1.5c0 .31-.252.562-.562.562Zm5.25 0c-.31 0-.562-.252-.562-.562V12.938c0-.985.659-1.85 1.5-2.312a2.25 2.25 0 0 0-3.062 0c.841.462 1.5 1.327 1.5 2.312v1.5c0 .31-.252.562-.562.562Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 15a2.25 2.25 0 0 1-2.25-2.25V12c0-1.191.601-2.262 1.5-2.834V6.75a.75.75 0 0 1 1.5 0v2.416c.899.572 1.5 1.643 1.5 2.834v.75A2.25 2.25 0 0 1 12 15Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12c0-4.969 4.031-9 9-9 4.969 0 9 4.031 9 9s-4.031 9-9 9c-4.969 0-9-4.031-9-9Z" /></svg>
-                    </div>
-                    <h3 class="mt-6 text-xl font-bold">100% Conversación</h3>
-                    <p class="mt-4 text-gray-600">Olvídate de la gramática irrelevante. Solo hablarás inglés con enfoque en casos prácticos (trabajo, viajes, entrevistas).</p>
-                </div>
-                
-                                <div class="rounded-lg bg-white p-8 text-center shadow-lg">
-                    <div class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 text-z-orange">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-8 w-8"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.94-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.06 2.772m10.12 0L12 12.75m0 0L6.94 15.522M12 12.75a5.995 5.995 0 0 0-5.06 2.772m10.12 0a5.971 5.971 0 0 0-.94-3.197M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.94-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.06 2.772m10.12 0L12 12.75m0 0L6.94 15.522" /></svg>
-                    </div>
-                    <h3 class="mt-6 text-xl font-bold">Grupos Reducidos</h3>
-                    <p class="mt-4 text-gray-600">Para hacer más personalizada y rápida la enseñanza, tenemos grupos de hasta 6 personas como máximo.</p>
-                </div>
-                
-                                <div class="rounded-lg bg-white p-8 text-center shadow-lg">
-                    <div class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 text-z-orange">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-8 w-8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" /></svg>
-                    </div>
-                    <h3 class="mt-6 text-xl font-bold">Adaptado a tu Nivel</h3>
-                    <p class="mt-4 text-gray-600">Realiza una prueba de nivel gratuita para personalizar tu plan de estudio (Niveles A1 a C2).</p>
-                </div>
-                
-                                <div class="rounded-lg bg-white p-8 text-center shadow-lg">
-                    <div class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 text-z-orange">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-8 w-8"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-18 0H4.5m15 0H19.5" /></svg>
-                    </div>
-                    <h3 class="mt-6 text-xl font-bold">Horarios Flexibles</h3>
-                    <p class="mt-4 text-gray-600">Elige el horario que mejor se adapte a ti: mañana, tarde o noche. ¡Tú decides!</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- ===== 3. SECCIÓN "NUESTRO MÉTODO" ===== -->
+    <section id="metodo" class="bg-z-white py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="mb-16 text-center text-3xl font-bold md:text-4xl">
+                Habla inglés desde el primer minuto con el método ZCLEVER
+            </h2>
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+                <!-- Tarjeta 1: Conversación -->
+                <div class="rounded-lg bg-white p-8 text-center shadow-lg">
+                    <div class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 text-z-orange">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-8 w-8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 20.25c.966 0 1.898-.168 2.754-.462-.858-.46-1.63-.996-2.296-1.662a.562.562 0 0 0-.812 0c-.665.666-1.438 1.202-2.296 1.662A8.92 8.92 0 0 0 12 20.25Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 15a.562.562 0 0 0 .562-.562V12.938c0-.985.659-1.85 1.5-2.312a2.25 2.25 0 0 0-3.062 0c.841.462 1.5 1.327 1.5 2.312v1.5c0 .31-.252.562-.562.562Zm-2.625 0c-.31 0-.562-.252-.562-.562V12.938c0-.985.659-1.85 1.5-2.312a2.25 2.25 0 0 0-3.062 0c.841.462 1.5 1.327 1.5 2.312v1.5c0 .31-.252.562-.562.562Zm5.25 0c-.31 0-.562-.252-.562-.562V12.938c0-.985.659-1.85 1.5-2.312a2.25 2.25 0 0 0-3.062 0c.841.462 1.5 1.327 1.5 2.312v1.5c0 .31-.252.562-.562.562Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 15a2.25 2.25 0 0 1-2.25-2.25V12c0-1.191.601-2.262 1.5-2.834V6.75a.75.75 0 0 1 1.5 0v2.416c.899.572 1.5 1.643 1.5 2.834v.75A2.25 2.25 0 0 1 12 15Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12c0-4.969 4.031-9 9-9 4.969 0 9 4.031 9 9s-4.031 9-9 9c-4.969 0-9-4.031-9-9Z" /></svg>
+                    </div>
+                    <h3 class="mt-6 text-xl font-bold">100% Conversación</h3>
+                    <p class="mt-4 text-gray-600">Olvídate de la gramática irrelevante. Solo hablarás inglés con enfoque en casos prácticos (trabajo, viajes, entrevistas).</p>
+                </div>
+                
+                <!-- Tarjeta 2: Grupos Reducidos -->
+                <div class="rounded-lg bg-white p-8 text-center shadow-lg">
+                    <div class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 text-z-orange">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-8 w-8"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.94-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.06 2.772m10.12 0L12 12.75m0 0L6.94 15.522M12 12.75a5.995 5.995 0 0 0-5.06 2.772m10.12 0a5.971 5.971 0 0 0-.94-3.197M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.94-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.06 2.772m10.12 0L12 12.75m0 0L6.94 15.522" /></svg>
+                    </div>
+                    <h3 class="mt-6 text-xl font-bold">Grupos Reducidos</h3>
+                    <p class="mt-4 text-gray-600">Para hacer más personalizada y rápida la enseñanza, tenemos grupos de hasta 6 personas como máximo.</p>
+                </div>
+                
+                <!-- Tarjeta 3: Nivel -->
+                <div class="rounded-lg bg-white p-8 text-center shadow-lg">
+                    <div class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 text-z-orange">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-8 w-8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" /></svg>
+                    </div>
+                    <h3 class="mt-6 text-xl font-bold">Adaptado a tu Nivel</h3>
+                    <p class="mt-4 text-gray-600">Realiza una prueba de nivel gratuita para personalizar tu plan de estudio (Niveles A1 a C2).</p>
+                </div>
+                
+                <!-- Tarjeta 4: Flexibilidad -->
+                <div class="rounded-lg bg-white p-8 text-center shadow-lg">
+                    <div class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 text-z-orange">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-8 w-8"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-18 0H4.5m15 0H19.5" /></svg>
+                    </div>
+                    <h3 class="mt-6 text-xl font-bold">Horarios Flexibles</h3>
+                    <p class="mt-4 text-gray-600">Elige el horario que mejor se adapte a ti: mañana, tarde o noche. ¡Tú decides!</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section id="ventajas" class="py-20">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col items-center gap-12 md:flex-row">
-                                <div class="w-full md:w-1/2">
-                    <img src="https://placehold.co/600x450/EB6620/F5F5F5?text=Comunidad+ZClever" alt="Estudiantes aprendiendo inglés online" class="rounded-lg shadow-xl">
-                </div>
-                
-                                <div class="w-full md:w-1/2">
-                    <h2 class="mb-8 text-3xl font-bold md:text-4xl">
-                        Aprende Donde Quieras, Cuando Quieras
-                    </h2>
-                    <ul class="space-y-5">
-        _B             <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-3 h-6 w-6 flex-shrink-0 text-green-500"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
-                            <span><strong>Horarios Flexibles:</strong> Contamos con clases en la mañana, tarde y noche.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-3 h-6 w-6 flex-shrink-0 text-green-500"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
-                            <span><strong>Profesores Nativos (USA):</strong> Aprende pronunciación y cultura real de Estados Unidos.</span>
-                        </li>
-                        <li class="flex items-start">
-                      _B     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-3 h-6 w-6 flex-shrink-0 text-green-500"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
-                            <span><strong>Acceso Global:</strong> Solo necesitas móvil, tablet o PC y conexión a internet.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-3 h-6 w-6 flex-shrink-0 text-green-500"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
-                            <span><strong>Materiales Incluidos:</strong> ¡No pagas extra por libros ni materiales! Todo está en nuestra plataforma.</span>
-                        </li>
-                        <li class="flex items-start">
-                     _B       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-3 h-6 w-6 flex-shrink-0 text-green-500"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
-                            <span><strong>Convivencia:</strong> Fomenta la interacción y aprende de tus compañeros en un ambiente relajado.</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- ===== 4. SECCIÓN "VENTAJAS Y ACCESIBILIDAD" ===== -->
+    <section id="ventajas" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col items-center gap-12 md:flex-row">
+                <!-- Columna Izquierda: Imagen -->
+                <div class="w-full md:w-1/2">
+                    <img src="https://placehold.co/600x450/EB6620/F5F5F5?text=Comunidad+ZClever" alt="Estudiantes aprendiendo inglés online" class="rounded-lg shadow-xl">
+                </div>
+                
+                <!-- Columna Derecha: Beneficios -->
+                <div class="w-full md:w-1/2">
+                    <h2 class="mb-8 text-3xl font-bold md:text-4xl">
+                        Aprende Donde Quieras, Cuando Quieras
+                    </h2>
+                    <ul class="space-y-5">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-3 h-6 w-6 flex-shrink-0 text-green-500"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                            <span><strong>Horarios Flexibles:</strong> Contamos con clases en la mañana, tarde y noche.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-3 h-6 w-6 flex-shrink-0 text-green-500"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                            <span><strong>Profesores Nativos (USA):</strong> Aprende pronunciación y cultura real de Estados Unidos.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-3 h-6 w-6 flex-shrink-0 text-green-500"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                            <span><strong>Acceso Global:</strong> Solo necesitas móvil, tablet o PC y conexión a internet.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-3 h-6 w-6 flex-shrink-0 text-green-500"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                            <span><strong>Materiales Incluidos:</strong> ¡No pagas extra por libros ni materiales! Todo está en nuestra plataforma.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-3 h-6 w-6 flex-shrink-0 text-green-500"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                            <span><strong>Convivencia:</strong> Fomenta la interacción y aprende de tus compañeros en un ambiente relajado.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section id="planes" class="bg-z-white py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="mb-6 text-center text-3xl font-bold md:text-4xl">
-                Tarifas Flexibles y Asequibles
-            </h2>
-            <p class="mb-4 text-center text-lg text-gray-700">¡En ZCLEVER no tienes que pagar por los libros! Todo el material está incluido.</p>
-            <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
-                
-                                <div class="flex flex-col rounded-lg border border-gray-200 bg-white p-8 shadow-lg">
-                    <h3 class="text-lg font-semibold uppercase text-gray-500">Clase de Prueba</h3>
-                    <p class="mt-4 text-5xl font-extrabold text-z-black">$0 <span class="text-xl font-medium text-gray-500">MXN</span></p>
-                    <ul class="mt-6 flex-grow space-y-3 text-gray-600">
-                        <li>1 clase de 1 hora</li>
-                        <li>Prueba de nivel incluida</li>
-                        <li>Conoce el método sin costo</li>
-                    </ul>
-              _B     <a href="#contacto" class="mt-8 block w-full rounded-lg bg-z-orange px-6 py-3 text-center font-bold text-white transition hover:bg-opacity-90">
-                        Empezar Gratis
-      _B           </a>
-                </div>
-                
-                                <div class="popular-card relative flex flex-col rounded-lg bg-white p-8">
-                    <span class="absolute right-6 top-6 rounded-full bg-orange-100 px-3 py-1 text-xs font-semibold text-z-orange">AHORRA 25%</span>
-                    <h3 class="text-lg font-semibold uppercase text-gray-500">Plan Mensual</h3>
-                    <p class="mt-4 text-5xl font-extrabold text-z-black">$2,099<span class="text-xl font-medium text-gray-500">/mes</span></p>
-                    <p class="text-md mt-1 font-medium text-gray-500 line-through">Precio regular: $2,799 MXN</p>
-                    <ul class="mt-6 flex-grow space-y-3 text-gray-600">
-                        <li>Acceso a todas las clases grupales</li>
-             _B         <li>Materiales y plataforma incluidos</li>
-                        <li>Cancela en cualquier momento</li>
-                        <li class="pt-2 text-gray-500 line-through">Inscripción: $2,200 MXN</li>
-                        <li class="text-gray-500 line-through">Material educativo: $3,200 MXN</li>
-                    </ul>
-                    <a href="#contacto" class="mt-8 block w-full rounded-lg bg-z-orange px-6 py-3 text-center font-bold text-white transition hover:bg-opacity-90">
-                        Inscribirme Ahora
-                    </a>
-                </div>
-                
-                                <div class="relative flex flex-col rounded-lg border border-gray-200 bg-white p-8 shadow-lg">
-                 _B <span class="absolute right-6 top-6 rounded-full bg-orange-100 px-3 py-1 text-xs font-semibold text-z-orange">AHORRA 40%</span>
-                    <h3 class="text-lg font-semibold uppercase text-gray-500">Plan Anual</h3>
-                    <p class="mt-4 text-5xl font-extrabold text-z-black">$1,679<span class="text-xl font-medium text-gray-500">/mes</span></p>
-                    <p class="mt-2 font-medium text-gray-500 line-through">Precio regular: $2,799 MXN</p>
-                    <ul class="mt-6 flex-grow space-y-3 text-gray-600">
-                        <li>¡El mejor precio garantizado!</li>
-                        <li>12 Meses Sin Intereses</li>
-                        <li>Acceso total + beneficios premium</li>
-                        <li class="pt-2 text-gray-500 line-through">Inscripción: $2,200 MXN</li>
-                        <li class="text-gray-500 line-through">Material educativo: $3,200 MXN</li>
-             _B     </ul>
-                    <a href="#contacto" class="mt-8 block w-full rounded-lg bg-z-orange px-6 py-3 text-center font-bold text-white transition hover:bg-opacity-90">
-                        Obtener Plan Anual
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-        <section id="empresas" class="bg-z-beige py-20">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="mb-6 text-3xl font-bold md:text-4xl">
-                Desbloquea la Comunicación de tu Equipo
-            </h2>
-            <p class="mx-auto max-w-3xl text-lg text-gray-700">
-                Ofrecemos planes de <strong>Inglés de Negocios (Business English)</strong> adaptados a las necesidades de tu empresa. Clases grupales enfocadas en temas profesionales, reportes de avance y la mejor metodología.
-            </p>
-            <a href="#contacto" class="mt-10 inline-block rounded-lg border-2 border-z-orange px-10 py-3 text-lg font-bold text-z-orange shadow-lg transition hover:bg-z-orange hover:text-white">
-                Solicitar Información Corporativa
-            </a>
-        </div>
-    </section>
+    <!-- ===== 5. SECCIÓN "PLANES Y PRECIOS" ===== -->
+    <section id="planes" class="bg-z-white py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="mb-6 text-center text-3xl font-bold md:text-4xl">
+                Tarifas Flexibles y Asequibles
+            </h2>
+            <p class="mb-4 text-center text-lg text-gray-700">¡En ZCLEVER no tienes que pagar por los libros! Todo el material está incluido.</p>
+            <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
+                
+                <!-- Tarjeta 1: Prueba (Sin costos tachados) -->
+                <div class="flex flex-col rounded-lg border border-gray-200 bg-white p-8 shadow-lg">
+                    <h3 class="text-lg font-semibold uppercase text-gray-500">Clase de Prueba</h3>
+                    <p class="mt-4 text-5xl font-extrabold text-z-black">$0 <span class="text-xl font-medium text-gray-500">MXN</span></p>
+                    <ul class="mt-6 flex-grow space-y-3 text-gray-600">
+                        <li>1 clase de 1 hora</li>
+                        <li>Prueba de nivel incluida</li>
+                        <li>Conoce el método sin costo</li>
+                    </ul>
+                    <a href="#contacto" class="mt-8 block w-full rounded-lg bg-z-orange px-6 py-3 text-center font-bold text-white transition hover:bg-opacity-90">
+                        Empezar Gratis
+                    </a>
+                </div>
+                
+                <!-- Tarjeta 2: Mensual (Con costos tachados) -->
+                <div class="popular-card relative flex flex-col rounded-lg bg-white p-8">
+                    <span class="absolute right-6 top-6 rounded-full bg-orange-100 px-3 py-1 text-xs font-semibold text-z-orange">AHORRA 25%</span>
+                    <h3 class="text-lg font-semibold uppercase text-gray-500">Plan Mensual</h3>
+                    <p class="mt-4 text-5xl font-extrabold text-z-black">$2,099<span class="text-xl font-medium text-gray-500">/mes</span></p>
+                    <p class="text-md mt-1 font-medium text-gray-500 line-through">Precio regular: $2,799 MXN</p>
+                    <ul class="mt-6 flex-grow space-y-3 text-gray-600">
+                        <li>Acceso a todas las clases grupales</li>
+                        <li>Materiales y plataforma incluidos</li>
+                        <li>Cancela en cualquier momento</li>
+                        <li class="pt-2 text-gray-500 line-through">Inscripción: $2,200 MXN</li>
+                        <li class="text-gray-500 line-through">Material educativo: $3,200 MXN</li>
+                    </ul>
+                    <a href="#contacto" class="mt-8 block w-full rounded-lg bg-z-orange px-6 py-3 text-center font-bold text-white transition hover:bg-opacity-90">
+                        Inscribirme Ahora
+                    </a>
+                </div>
+                
+                <!-- Tarjeta 3: Anual (Con costos tachados y 40% off) -->
+                <div class="relative flex flex-col rounded-lg border border-gray-200 bg-white p-8 shadow-lg">
+                    <span class="absolute right-6 top-6 rounded-full bg-orange-100 px-3 py-1 text-xs font-semibold text-z-orange">AHORRA 40%</span>
+                    <h3 class="text-lg font-semibold uppercase text-gray-500">Plan Anual</h3>
+                    <p class="mt-4 text-5xl font-extrabold text-z-black">$1,679<span class="text-xl font-medium text-gray-500">/mes</span></p>
+                    <p class="mt-2 font-medium text-gray-500 line-through">Precio regular: $2,799 MXN</p>
+                    <ul class="mt-6 flex-grow space-y-3 text-gray-600">
+                        <li>¡El mejor precio garantizado!</li>
+                        <li>12 Meses Sin Intereses</li>
+                        <li>Acceso total + beneficios premium</li>
+                        <li class="pt-2 text-gray-500 line-through">Inscripción: $2,200 MXN</li>
+                        <li class="text-gray-500 line-through">Material educativo: $3,200 MXN</li>
+                    </ul>
+                    <a href="#contacto" class="mt-8 block w-full rounded-lg bg-z-orange px-6 py-3 text-center font-bold text-white transition hover:bg-opacity-90">
+                        Obtener Plan Anual
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ===== 6. SECCIÓN "INGLÉS PARA EMPRESAS (B2B)" ===== -->
+    <section id="empresas" class="bg-z-beige py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="mb-6 text-3xl font-bold md:text-4xl">
+                Desbloquea la Comunicación de tu Equipo
+            </h2>
+            <p class="mx-auto max-w-3xl text-lg text-gray-700">
+                Ofrecemos planes de <strong>Inglés de Negocios (Business English)</strong> adaptados a las necesidades de tu empresa. Clases grupales enfocadas en temas profesionales, reportes de avance y la mejor metodología.
+            </p>
+            <a href="#contacto" class="mt-10 inline-block rounded-lg border-2 border-z-orange px-10 py-3 text-lg font-bold text-z-orange shadow-lg transition hover:bg-z-orange hover:text-white">
+                Solicitar Información Corporativa
+            </a>
+        </div>
+    </section>
 
-            <section id="testimonios" class="py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="mb-16 text-center text-3xl font-bold md:text-4xl">
-                Qué dicen nuestros alumnos
-            </h2>
-            
-                        <div class="w-full overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-                
-                                <div class="flex w-max animate-scroll hover:[animation-play-state:paused]">
-                    
-                                        <div class="flex flex-nowrap">
-             _B           
-                                                <div class="mx-4 w-80 flex-shrink-0 rounded-lg bg-z-white p-8 shadow-lg">
-                            <div class="text-z-orange"><span>⭐⭐⭐⭐⭐</span></div>
-                            <p class="mt-4 text-gray-600">"Quería mejorar mi inglés para ayudar a mis hijos con sus tareas. El método es muy práctico y ahora hasta entiendo mejor las series que vemos en familia. Estoy muy contenta!"</p>
-                            <p class="mt-6 font-bold">Ana G., Ama de casa</p>
-                        </div>
-                        
-                                                <div class="mx-4 w-80 flex-shrink-0 rounded-lg bg-z-white p-8 shadow-lg">
-                            <div class="text-z-orange"><span>⭐⭐⭐⭐</span>☆</div>
-           _B               <p class="mt-4 text-gray-600">"Muy buen servicio. Me gusta que las clases son 100% conversación. A veces la conexión de algunos compañeros se traba un poquito, pero nada grave. Sí lo recomiendo."</p>
-                            <p class="mt-6 font-bold">Sofía L., Diseñadora</p>
-                        </div>
+    <!-- ===== 7. SECCIÓN "TESTIMONIOS" ===== -->
+    <!-- CAMBIO: Esta sección se ha modificado por un carrusel -->
+    <section id="testimonios" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="mb-16 text-center text-3xl font-bold md:text-4xl">
+                Qué dicen nuestros alumnos
+            </h2>
+            
+            <!-- Contenedor del carrusel con máscara de degradado -->
+            <div class="w-full overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+                
+                <!-- Contenedor que se anima. Se pausa al pasar el mouse por encima -->
+                <div class="flex w-max animate-scroll hover:[animation-play-state:paused]">
+                    
+                    <!-- Grupo 1 de Testimonios (Originales) -->
+                    <div class="flex flex-nowrap">
+                        
+                        <!-- Testimonio 1 (Ana) -->
+                        <div class="mx-4 w-80 flex-shrink-0 rounded-lg bg-z-white p-8 shadow-lg">
+                            <div class="text-z-orange"><span>⭐⭐⭐⭐⭐</span></div>
+                            <p class="mt-4 text-gray-600">"Quería mejorar mi inglés para ayudar a mis hijos con sus tareas. El método es muy práctico y ahora hasta entiendo mejor las series que vemos en familia. Estoy muy contenta!"</p>
+                            <p class="mt-6 font-bold">Ana G., Ama de casa</p>
+                        </div>
+                        
+                        <!-- Testimonio 2 (Sofía) -->
+                        <div class="mx-4 w-80 flex-shrink-0 rounded-lg bg-z-white p-8 shadow-lg">
+                            <div class="text-z-orange"><span>⭐⭐⭐⭐</span>☆</div>
+                            <p class="mt-4 text-gray-600">"Muy buen servicio. Me gusta que las clases son 100% conversación. A veces la conexión de algunos compañeros se traba un poquito, pero nada grave. Sí lo recomiendo."</p>
+                            <p class="mt-6 font-bold">Sofía L., Diseñadora</p>
+                        </div>
 
-                                                <div class="mx-4 w-80 flex-shrink-0 rounded-lg bg-z-white p-8 shadow-lg">
-                            <div class="text-z-orange"><span>⭐⭐⭐⭐⭐</span></div>
-                            <p class="mt-4 text-gray-600">"Por fin me animé! Los horarios son cómodos y el grupo es pequeño. Ya hice amigos y me siento muy cómodo hablando con mis compañeros y con el profesor."</p>
-                            <p class="mt-6 font-bold">Carlos M., Desarrollador</p>
-                        </div>
+                        <!-- Testimonio 3 (Carlos) -->
+                        <div class="mx-4 w-80 flex-shrink-0 rounded-lg bg-z-white p-8 shadow-lg">
+                            <div class="text-z-orange"><span>⭐⭐⭐⭐⭐</span></div>
+                            <p class="mt-4 text-gray-600">"Por fin me animé! Los horarios son cómodos y el grupo es pequeño. Ya hice amigos y me siento muy cómodo hablando con mis compañeros y con el profesor."</p>
+                            <p class="mt-6 font-bold">Carlos M., Desarrollador</p>
+                        </div>
 
-                                     _B         <div class="mx-4 w-80 flex-shrink-0 rounded-lg bg-z-white p-8 shadow-lg">
-                            <div class="text-z-orange"><span>⭐⭐⭐⭐⭐</span></div>
-                            <p class="mt-4 text-gray-600">"Me encantó la idea de que todo el material venga incluido. Es genial no tener que preocuparse por costos extras al empezar. 100% recomendado!"</p>
-                            <p class="mt-6 font-bold">Lucía R., Ingeniera</p>
-                        </div>
+                        <!-- Testimonio 4 (Lucía) -->
+                        <div class="mx-4 w-80 flex-shrink-0 rounded-lg bg-z-white p-8 shadow-lg">
+                            <div class="text-z-orange"><span>⭐⭐⭐⭐⭐</span></div>
+                            <p class="mt-4 text-gray-600">"Me encantó la idea de que todo el material venga incluido. Es genial no tener que preocuparse por costos extras al empezar. 100% recomendado!"</p>
+                            <p class="mt-6 font-bold">Lucía R., Ingeniera</p>
+                        </div>
 
-                                                <div class="mx-4 w-80 flex-shrink-0 rounded-lg bg-z-white p-8 shadow-lg">
-                            <div class="text-z-orange"><span>⭐⭐⭐⭐⭐</span></div>
-                            <p class="mt-4 text-gray-600">"La neta, pensé que iba a ser más aburrido, pero las clases se pasan volando. Los profes son de EUA y eso se nota bastante en la pronunciación."</p>
-                            <p class="mt-6 font-bold">Javier P., Estudiante</p>
-           _B           </div>
+                        <!-- Testimonio 5 (Javier) -->
+                        <div class="mx-4 w-80 flex-shrink-0 rounded-lg bg-z-white p-8 shadow-lg">
+                            <div class="text-z-orange"><span>⭐⭐⭐⭐⭐</span></div>
+                            <p class="mt-4 text-gray-600">"La neta, pensé que iba a ser más aburrido, pero las clases se pasan volando. Los profes son de EUA y eso se nota bastante en la pronunciación."</p>
+                            <p class="mt-6 font-bold">Javier P., Estudiante</p>
+                        </div>
 
-                                                <div class="mx-4 w-80 flex-shrink-0 rounded-lg bg-z-white p-8 shadow-lg">
-                            <div class="text-z-orange"><span>⭐⭐⭐⭐⭐</span></div>
-                            <p class="mt-4 text-gray-600">"Lo estoy usando para el trabajo y ya me siento más seguro en las juntas. Poder agendar en la noche es una gran ventaja. Buen método, la verdad."</p>
-                            <p class="mt-6 font-bold">Miguel A., Gerente de Proyectos</p>
-                        </div>
-            _B       </div>
-                    
-                                        <div class="flex flex-nowrap" aria-hidden="true">
-                        
-                                                <div class="mx-4 w-80 flex-shrink-0 rounded-lg bg-z-white p-8 shadow-lg">
-                            <div class="text-z-orange"><span>⭐⭐⭐⭐⭐</span></div>
-         _B                 <p class="mt-4 text-gray-600">"Quería mejorar mi inglés para ayudar a mis hijos con sus tareas. El método es muy práctico y ahora hasta entiendo mejor las series que vemos en familia. Estoy muy contenta!"</p>
-                            <p class="mt-6 font-bold">Ana G., Ama de casa</p>
-                        </div>
-                        
-                                                <div class="mx-4 w-80 flex-shrink-0 rounded-lg bg-z-white p-8 shadow-lg">
-                            <div class="text-z-orange"><span>⭐⭐⭐⭐</span>☆</div>
-                            <p class="mt-4 text-gray-600">"Muy buen servicio. Me gusta que las clases son 100% conversación. A veces la conexión de algunos compañeros se traba un poquito, pero nada grave. Sí lo recomiendo."</p>
-                         _B <p class="mt-6 font-bold">Sofía L., Diseñadora</p>
-                        </div>
+                        <!-- Testimonio 6 (Miguel) -->
+                        <div class="mx-4 w-80 flex-shrink-0 rounded-lg bg-z-white p-8 shadow-lg">
+                            <div class="text-z-orange"><span>⭐⭐⭐⭐⭐</span></div>
+                            <p class="mt-4 text-gray-600">"Lo estoy usando para el trabajo y ya me siento más seguro en las juntas. Poder agendar en la noche es una gran ventaja. Buen método, la verdad."</p>
+                            <p class="mt-6 font-bold">Miguel A., Gerente de Proyectos</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Grupo 2 de Testimonios (Duplicados para el bucle) -->
+                    <div class="flex flex-nowrap" aria-hidden="true">
+                        
+                        <!-- Testimonio 1 (Ana) - COPIA -->
+                        <div class="mx-4 w-80 flex-shrink-0 rounded-lg bg-z-white p-8 shadow-lg">
+                            <div class="text-z-orange"><span>⭐⭐⭐⭐⭐</span></div>
+                            <p class="mt-4 text-gray-600">"Quería mejorar mi inglés para ayudar a mis hijos con sus tareas. El método es muy práctico y ahora hasta entiendo mejor las series que vemos en familia. Estoy muy contenta!"</p>
+                            <p class="mt-6 font-bold">Ana G., Ama de casa</p>
+                        </div>
+                        
+                        <!-- Testimonio 2 (Sofía) - COPIA -->
+                        <div class="mx-4 w-80 flex-shrink-0 rounded-lg bg-z-white p-8 shadow-lg">
+                            <div class="text-z-orange"><span>⭐⭐⭐⭐</span>☆</div>
+                            <p class="mt-4 text-gray-600">"Muy buen servicio. Me gusta que las clases son 100% conversación. A veces la conexión de algunos compañeros se traba un poquito, pero nada grave. Sí lo recomiendo."</p>
+                            <p class="mt-6 font-bold">Sofía L., Diseñadora</p>
+                        </div>
 
-                                                <div class="mx-4 w-80 flex-shrink-0 rounded-lg bg-z-white p-8 shadow-lg">
-                            <div class="text-z-orange"><span>⭐⭐⭐⭐⭐</span></div>
-                            <p class="mt-4 text-gray-600">"Por fin me animé! Los horarios son cómodos y el grupo es pequeño. Ya hice amigos y me siento muy cómodo hablando con mis compañeros y con el profesor."</p>
-                            <p class="mt-6 font-bold">Carlos M., Desarrollador</p>
-                        </div>
+                        <!-- Testimonio 3 (Carlos) - COPIA -->
+                        <div class="mx-4 w-80 flex-shrink-0 rounded-lg bg-z-white p-8 shadow-lg">
+                            <div class="text-z-orange"><span>⭐⭐⭐⭐⭐</span></div>
+                            <p class="mt-4 text-gray-600">"Por fin me animé! Los horarios son cómodos y el grupo es pequeño. Ya hice amigos y me siento muy cómodo hablando con mis compañeros y con el profesor."</p>
+                            <p class="mt-6 font-bold">Carlos M., Desarrollador</p>
+                        </div>
 
-           _B             content:                   <div class="mx-4 w-80 flex-shrink-0 rounded-lg bg-z-white p-8 shadow-lg">
-                            <div class="text-z-orange"><span>⭐⭐⭐⭐⭐</span></div>
-                            <p class="mt-4 text-gray-600">"Me encantó la idea de que todo el material venga incluido. Es genial no tener que preocuparse por costos extras al empezar. 100% recomendado!"</p>
-                            <p class="mt-6 font-bold">Lucía R., Ingeniera</p>
-                        </div>
+                        <!-- Testimonio 4 (Lucía) - COPIA -->
+                        <div class="mx-4 w-80 flex-shrink-0 rounded-lg bg-z-white p-8 shadow-lg">
+                            <div class="text-z-orange"><span>⭐⭐⭐⭐⭐</span></div>
+                            <p class="mt-4 text-gray-600">"Me encantó la idea de que todo el material venga incluido. Es genial no tener que preocuparse por costos extras al empezar. 100% recomendado!"</p>
+                            <p class="mt-6 font-bold">Lucía R., Ingeniera</p>
+                        </div>
 
-                  _B     C                 <div class="mx-4 w-80 flex-shrink-0 rounded-lg bg-z-white p-8 shadow-lg">
-                            <div class="text-z-orange"><span>⭐⭐⭐⭐⭐</span></div>
-                            <p class="mt-4 text-gray-600">"La neta, pensé que iba a ser más aburrido, pero las clases se pasan volando. Los profes son de EUA y eso se nota bastante en la pronunciación."</p>
-                            <p class="mt-6 font-bold">Javier P., Estudiante</p>
-                        </div>
+                        <!-- Testimonio 5 (Javier) - COPIA -->
+                        <div class="mx-4 w-80 flex-shrink-0 rounded-lg bg-z-white p-8 shadow-lg">
+                            <div class="text-z-orange"><span>⭐⭐⭐⭐⭐</span></div>
+                            <p class="mt-4 text-gray-600">"La neta, pensé que iba a ser más aburrido, pero las clases se pasan volando. Los profes son de EUA y eso se nota bastante en la pronunciación."</p>
+                            <p class="mt-6 font-bold">Javier P., Estudiante</p>
+                        </div>
 
-                                             _B <div class="mx-4 w-80 flex-shrink-0 rounded-lg bg-z-white p-8 shadow-lg">
-                            <div class="text-z-orange"><span>⭐⭐⭐⭐⭐</span></div>
-                            <p class="mt-4 text-gray-600">"Lo estoy usando para el trabajo y ya me siento más seguro en las juntas. Poder agendar en la noche es una gran ventaja. Buen método, la verdad."</p>
-                            <p class="mt-6 font-bold">Miguel A., Gerente de Proyectos</p>
-                        </div>
-                    </div>
+                        <!-- Testimonio 6 (Miguel) - COPIA -->
+                        <div class="mx-4 w-80 flex-shrink-0 rounded-lg bg-z-white p-8 shadow-lg">
+                            <div class="text-z-orange"><span>⭐⭐⭐⭐⭐</span></div>
+                            <p class="mt-4 text-gray-600">"Lo estoy usando para el trabajo y ya me siento más seguro en las juntas. Poder agendar en la noche es una gran ventaja. Buen método, la verdad."</p>
+                            <p class="mt-6 font-bold">Miguel A., Gerente de Proyectos</p>
+                        </div>
+                    </div>
 
-                </div>
-            </div>
-        </div>
-    </section>
+                </div>
+            </div>
+        </div>
+    </section>
 
-content:         <section id="contacto" class="bg-z-white py-20">
-        <div class="container mx-auto max-w-2xl px-6 text-center">
-            <h2 class="mb-6 text-3xl font-bold md:text-4xl">
-                ¡No lo dejes para luego, decide hablar inglés hoy!
-            </h2>
-            <p class="mb-10 text-lg text-gray-700">
-                Llena el formulario y te contactaremos a la brevedad para aclarar todas tus dudas y ayudarte a iniciar tu camino hacia la fluidez. ¡El momento es ahora!
-            </p>
-            
-            <form action="https://formsubmit.co/admin@zclever.com" method="POST">
-                
-                                <input type="hidden" name="_next" value="https://www.zclever.com/gracias.html">
+    <!-- ===== 8. SECCIÓN DE CONTACTO (FORMULARIO) ===== -->
+    <section id="contacto" class="bg-z-white py-20">
+        <div class="container mx-auto max-w-2xl px-6 text-center">
+            <h2 class="mb-6 text-3xl font-bold md:text-4xl">
+                ¡No lo dejes para luego, decide hablar inglés hoy!
+            </h2>
+            <p class="mb-10 text-lg text-gray-700">
+                Llena el formulario y te contactaremos a la brevedad para aclarar todas tus dudas y ayudarte a iniciar tu camino hacia la fluidez. ¡El momento es ahora!
+            </p>
+            
+            <form action="https://formsubmit.co/admin@zclever.com" method="POST">
+                
+                <!-- Página de "Gracias". ¡Recuerda crear este archivo! -->
+                <input type="hidden" name="_next" value="https://www.zclever.com/gracias.html">
 
-                                <input type="hidden" name="_subject" value="Nuevo prospecto de ZCLEVER.COM!">
-                
-                                <input type="text" name="_honey" style="display:none">
+                <!-- Asunto del email que recibirás -->
+                <input type="hidden" name="_subject" value="Nuevo prospecto de ZCLEVER.COM!">
+                
+                <!-- Campo trampa para Spam (Honeypot) -->
+                <input type="text" name="_honey" style="display:none">
 
-                                <input type="hidden" name="_captcha" value="false">
+                <!-- Deshabilitar reCAPTCHA (más limpio para el usuario) -->
+                <input type="hidden" name="_captcha" value="false">
 
-      _B       <div class="space-y-6">
-                    <div>
-                        <label for="nombre" class="mb-2 block text-left font-medium text-gray-700">Nombre Completo</label>
-                        <input type="text" id="nombre" name="Nombre" class="w-full rounded-lg border border-gray-300 p-3" placeholder="Tu Nombre" required>
-                    </div>
-                    <div>
-                        <label for="correo" class="mb-2 block text-left font-medium text-gray-700">Correo Electrónico</label>
-                        <input type="email" id="correo" name="Correo" class="w-full rounded-lg border border-gray-300 p-3" placeholder="tu@correo.com" required>
-             _B     </div>
-        _B         <div>
-                        <label for="telefono" class="mb-2 block text-left font-medium text-gray-700">Teléfono (WhatsApp)</label>
-                        <input type="tel" id="telefono" name="Telefono" class="w-full rounded-lg border border-gray-300 p-3" placeholder="+52 XXX XXX XXXX" required>
-                    </div>
-                    <div>
-                        <label for="comentarios" class="mb-2 block text-left font-medium text-gray-700">Comentarios (Opcional)</label>
-                        <textarea id="comentarios" name="Comentarios" rows="4" class="w-full rounded-lg border border-gray-300 p-3" placeholder="¿Tienes alguna pregunta o preferencia de horario?"></textarea>
-                 _B </div>
-                    
-                    <button type="submit" class="w-full rounded-lg bg-z-orange px-10 py-4 text-xl font-bold text-white shadow-xl transition hover:bg-opacity-90">
-                        Enviar y Agendar Clase
-                    </button>
-                </div>
-            </form>
-            
-            <p class="my-8 text-gray-600">O si lo prefieres, contáctanos directamente:</p>
-            
-                        <a href="https://api.whatsapp.com/send?phone=526645025953&text=Hola!%20Quiero%20más%20información%20sobre%20la%20clase%20gratis%20de%20ZCLEVER." target="_blank" rel="noopener noreferrer" class="inline-flex w-full items-center justify-center rounded-lg bg-green-500 px-10 py-4 text-xl font-bold text-white shadow-xl transition hover:bg-green-600 sm:w-auto">
-default:               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="mr-3"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.0-6.556 5.338-11.895 11.893-11.895 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.895-11.894 11.895a11.911 11.911 0 0 1-5.947-1.587l-6.162 1.688a.709.709 0 0 1-.856-.856zM6.977 18.913a.577.577 0 0 0 .687.129c.873-.44 1.734-.854 2.458-1.422a.654.654 0 0 0 .227-.824c-.335-.55-.537-1.16-.62-1.799-.04-.336.041-.676.246-.957.568-.78 1.49-1.356 2.592-1.635a.656.656 0 0 0 .54-.095c.304-.188.63-.312.97-.37.336-.059.676-.041.99.054.918.283 1.766.78 2.448 1.462.654.655.999 1.49.961 2.404-.04.913-.443 1.748-1.092 2.396a.654.654 0 0 0-.14.887c.451.72 1.002 1.396 1.625 2.028a.577.577 0 0 0 .824-.229c.414-.702.687-1.513.774-2.396.099-1.009-.096-2.01-.527-2.914-.413-.866-1.024-1.614-1.799-2.228a6.51 6.51 0 0 0-3.074-1.71c-.34-.06-.68-.077-1.011-.051s-.64.101-.94.228c-1.133.468-2.14 1.25-2.898 2.24a.654.654 0 0 0-.1.54c.06.335.078.675.053 1.009-.074.97-.39 1.896-.913 2.709-.253.39-.68.601-1.092.527-.412-.074-.78-.295-1.041-.618-.873-1.076-1.32-2.396-1.32-3.79a6.503 6.503 0 0 1 1.711-4.529C5.568 5.8 7.099 4.8 8.797 4.8c1.698 0 3.23.999 4.099 2.544.87 1.544.7 3.49-.443 4.836-.188.228-.413.414-.687.538-.304.127-.63.188-.97.188-.335 0-.662-.06-.97-.188s-.58-.295-.795-.538c-.87-1.076-1.32-2.396-1.32-3.79a6.503 6.503 0 0 1 1.711-4.529C5.568 5.8 7.099 4.8 8.797 4.8c1.698 0 3.23.999 4.099 2.544.87 1.544.7 3.49-.443 4.836h.001z"></path></svg>
-                Contactar por WhatsApp
-            </a>
-        </div>
-    </section>
+                <div class="space-y-6">
+                    <div>
+                        <label for="nombre" class="mb-2 block text-left font-medium text-gray-700">Nombre Completo</label>
+                        <input type="text" id="nombre" name="Nombre" class="w-full rounded-lg border border-gray-300 p-3" placeholder="Tu Nombre" required>
+                    </div>
+                    <div>
+                        <label for="correo" class="mb-2 block text-left font-medium text-gray-700">Correo Electrónico</label>
+                        <input type="email" id="correo" name="Correo" class="w-full rounded-lg border border-gray-300 p-3" placeholder="tu@correo.com" required>
+                    </div>
+                    <div>
+                        <label for="telefono" class="mb-2 block text-left font-medium text-gray-700">Teléfono (WhatsApp)</label>
+                        <input type="tel" id="telefono" name="Telefono" class="w-full rounded-lg border border-gray-300 p-3" placeholder="+52 XXX XXX XXXX" required>
+                    </div>
+                    <div>
+                        <label for="comentarios" class="mb-2 block text-left font-medium text-gray-700">Comentarios (Opcional)</label>
+                        <textarea id="comentarios" name="Comentarios" rows="4" class="w-full rounded-lg border border-gray-300 p-3" placeholder="¿Tienes alguna pregunta o preferencia de horario?"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full rounded-lg bg-z-orange px-10 py-4 text-xl font-bold text-white shadow-xl transition hover:bg-opacity-90">
+                        Enviar y Agendar Clase
+                    </button>
+                </div>
+            </form>
+            
+            <p class="my-8 text-gray-600">O si lo prefieres, contáctanos directamente:</p>
+            
+            <!-- Botón de WhatsApp -->
+            <a href="https://api.whatsapp.com/send?phone=526645025953&text=Hola!%20Quiero%20más%20información%20sobre%20la%20clase%20gratis%20de%20ZCLEVER." target="_blank" rel="noopener noreferrer" class="inline-flex w-full items-center justify-center rounded-lg bg-green-500 px-10 py-4 text-xl font-bold text-white shadow-xl transition hover:bg-green-600 sm:w-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="mr-3"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.0-6.556 5.338-11.895 11.893-11.895 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.895-11.894 11.895a11.911 11.911 0 0 1-5.947-1.587l-6.162 1.688a.709.709 0 0 1-.856-.856zM6.977 18.913a.577.577 0 0 0 .687.129c.873-.44 1.734-.854 2.458-1.422a.654.654 0 0 0 .227-.824c-.335-.55-.537-1.16-.62-1.799-.04-.336.041-.676.246-.957.568-.78 1.49-1.356 2.592-1.635a.656.656 0 0 0 .54-.095c.304-.188.63-.312.97-.37.336-.059.676-.041.99.054.918.283 1.766.78 2.448 1.462.654.655.999 1.49.961 2.404-.04.913-.443 1.748-1.092 2.396a.654.654 0 0 0-.14.887c.451.72 1.002 1.396 1.625 2.028a.577.577 0 0 0 .824-.229c.414-.702.687-1.513.774-2.396.099-1.009-.096-2.01-.527-2.914-.413-.866-1.024-1.614-1.799-2.228a6.51 6.51 0 0 0-3.074-1.71c-.34-.06-.68-.077-1.011-.051s-.64.101-.94.228c-1.133.468-2.14 1.25-2.898 2.24a.654.654 0 0 0-.1.54c.06.335.078.675.053 1.009-.074.97-.39 1.896-.913 2.709-.253.39-.68.601-1.092.527-.412-.074-.78-.295-1.041-.618-.873-1.076-1.32-2.396-1.32-3.79a6.503 6.503 0 0 1 1.711-4.529C5.568 5.8 7.099 4.8 8.797 4.8c1.698 0 3.23.999 4.099 2.544.87 1.544.7 3.49-.443 4.836-.188.228-.413.414-.687.538-.304.127-.63.188-.97.188-.335 0-.662-.06-.97-.188s-.58-.295-.795-.538c-.87-1.076-1.32-2.396-1.32-3.79a6.503 6.503 0 0 1 1.711-4.529C5.568 5.8 7.099 4.8 8.797 4.8c1.698 0 3.23.999 4.099 2.544.87 1.544.7 3.49-.443 4.836h.001z"></path></svg>
+                Contactar por WhatsApp
+            </a>
+        </div>
+    </section>
 
-        <footer id="footer" class="bg-z-black py-16 text-gray-300">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 gap-12 md:grid-cols-4">
-                                <div>
-                    <h3 class="text-2xl font-bold text-white">ZCLEVER.COM</h3>
-content:                   <p class="mt-4 text-gray-400">Mejora tu fluidez en tiempo récord con clases de conversación grupales.</p>
-                </div>
-                
-                TODO:               <div>
-                    <h4 class="text-lg font-semibold text-white">Navegación</h4>
-          _B       <ul class="mt-4 space-y-2">
-                        <li><a href="#metodo" class="hover:text-white">Metodología</a></li>
-                        <li><a href="#planes" class="hover:text-white">Precios</a></li>
-                        <li><a href="#empresas" class="hover:text-white">Empresas</a></li>
-                        <li><a href="faq.html" class="hover:text-white">FAQ</a></li>
-                    </ul>
-                </div>
-                
-                                <div>
-                    <h4 class="text-lg font-semibold text-white">Legal</h4>
-                    <ul class="mt-4 space-y-2">
-                        <li><a href="aviso-legal.html" class="hover:text-white">Aviso Legal</a></li>
-op:                     <li><a href="politica-privacidad.html" class="hover:text-white">Política de Privacidad</a></li>
-                        <li><a href="terminos-condiciones.html" class="hover:text-white">Términos y Condiciones</a></li>
-                    </ul>
-                </div>
-                
-          _B     á               <div>
-                    <h4 class="text-lg font-semibold text-white">Contacto</h4>
-data:               <div class="mt-4 space-y-4">
-                        code:                   <div>
-                            <p class="font-medium text-white">Alejandro Perea</p>
-*                       <a href="mailto:admin@zclever.com" class="text-gray-300 hover:text-white">admin@zclever.com</a><br>
-                            <a href="https://api.whatsapp.com/send?phone=526645025953" class="text-gray-300 hover:text-white">+52 664 502 5953</a>
-                        </div>
-                                                <div>
-                            <p class="font-medium text-white">Renato Gonzalez</p>
-                            <a href="mailto:admin@zclever.com" class="text-gray-300 hover:text-white">renato.gonzalez@zclever.com</a><br>
-                     _B     <a href="https://api.whatsapp.com/send?phone=528711787692" class="text-gray-300 hover:text-white">+52 871 178 7692</a>
-  key:                   </div>
-                    </div>
-                </div>
-            </div>
-            <hr class="my-8 border-gray-700">
-section_type:             <p class="text-center text-gray-500">© 2025 ZCLEVER.COM. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+    <!-- ===== 9. PIE DE PÁGINA (FOOTER) ===== -->
+    <footer id="footer" class="bg-z-black py-16 text-gray-300">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 gap-12 md:grid-cols-4">
+                <!-- Col 1: Logo y Descripción -->
+                <div>
+                    <h3 class="text-2xl font-bold text-white">ZCLEVER.COM</h3>
+                    <p class="mt-4 text-gray-400">Mejora tu fluidez en tiempo récord con clases de conversación grupales.</p>
+                </div>
+                
+                <!-- Col 2: Navegación -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white">Navegación</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#metodo" class="hover:text-white">Metodología</a></li>
+                        <li><a href="#planes" class="hover:text-white">Precios</a></li>
+                        <li><a href="#empresas" class="hover:text-white">Empresas</a></li>
+                        <li><a href="faq.html" class="hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Col 3: Legal (Actualizado) -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white">Legal</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="aviso-legal.html" class="hover:text-white">Aviso Legal</a></li>
+                        <li><a href="politica-privacidad.html" class="hover:text-white">Política de Privacidad</a></li>
+                        <li><a href="terminos-condiciones.html" class="hover:text-white">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Col 4: Contacto (Actualizado con nuevo formato) -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white">Contacto</h4>
+                    <div class="mt-4 space-y-4">
+                        <!-- Contacto Alejandro -->
+                        <div>
+                            <p class="font-medium text-white">Alejandro Perea</p>
+                            <a href="mailto:admin@zclever.com" class="text-gray-300 hover:text-white">admin@zclever.com</a><br>
+                            <a href="https://api.whatsapp.com/send?phone=526645025953" class="text-gray-300 hover:text-white">+52 664 502 5953</a>
+                        </div>
+                        <!-- Contacto Renato -->
+                        <div>
+                            <p class="font-medium text-white">Renato Gonzalez</p>
+                            <a href="mailto:admin@zclever.com" class="text-gray-300 hover:text-white">renato.gonzalez@zclever.com</a><br>
+                            <a href="https://api.whatsapp.com/send?phone=528711787692" class="text-gray-300 hover:text-white">+52 871 178 7692</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-8 border-gray-700">
+            <p class="text-center text-gray-500">© 2025 ZCLEVER.COM. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
-        <script>
-        document.getElementById('menu-btn').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
-    </script>
+    <!-- ===== JavaScript para Menú Móvil ===== -->
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
+
+
+
+
+
